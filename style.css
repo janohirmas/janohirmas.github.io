@@ -1,55 +1,80 @@
+html{
+    margin: 0 0;
+}
 body{
     background: rgb(8, 56, 8);
-    font-size: 1em;
     color: white;
+    font-size: 3.5vh;
     font-style: normal;
+    
 }
 /* LAYOUT STRUCTURE */
 .main-box{
-    position: absolute;
-    left: 22.5%;
-    right: 27.5%;
+    display: inline-block;
+    width: 70vw;
+    text-align: justify;
+    box-sizing: border-box;
 }
-.social-links{
-    position: absolute;
-    width: 5%;
-}
-#mySidenav a {
-    border-radius: 0 2.5% 2.5% 0; /* Rounded corners on the top right and bottom right side */
-    color: white; /* White text color */
-    font-size: 20px; /* Increase font size */
-    left: -15%; /* Position them outside of the screen */
-    padding: 15px; /* 15px padding */
-    position: absolute; /* Position them relative to the browser window */
-    text-decoration: none; /* Remove underline */
-    transition: 0.3s; /* Add transition on hover */
-    width: 17.5%; /* Set a specific width */
-    background-color: #d9a30f;
-  }
-  #mySidenav a:hover {
-    left: 0; /* On mouse-over, make the elements appear as they should */
-  }
-  /* HOVER BAR LOCATIONS */
-  #about {
-    top: 2.5%;
-  }
-  #educ {
-    top: 15%;
-  }
-  #research {
-    top: 27.5%;
-  }
-  #hobbies {
-    top: 40%;
-  }
-  #contact {
-    top: 52.5%;
-  }
-  /* PERSONAL PICTURE STYLE */
+
+/* PERSONAL PICTURE STYLE */
   #personal-pic{
     position: absolute;
-    top: 5%;
+    top: 5vh;
     right: 5%;
     width: 20%;
 
   }
+
+/* HERO STYLES */
+.full-hero{
+    background-color: green;
+    height: 25vh;
+}
+.social-links{
+    float: right;
+    position: absolute;
+    width: 5vh;
+}
+#mySidenav {
+    
+    width: 20vw;
+    display: inline-block;
+    box-sizing: border-box;
+}
+#mySidenav a {
+    background-color: #d9a30f;
+    box-sizing: border-box;
+    border-radius: 0 2.5vh 2.5vh 0; /* Rounded corners on the top right and bottom right side */
+    color: white; /* White text color */
+    display: block;
+    font-size: 5vh; /* Increase font size */
+    left: -25vh; /* Position them outside of the screen */
+    padding: 2.5vh; /* 15px padding */
+    position: relative ; /* Position them relative to the browser window */
+    margin: 2vh 0;
+    text-decoration: none; /* Remove underline */
+    transition: 0.4s; /* Add transition on hover */
+    width: 17.5vw; /* Set a specific width */
+    height: 10vh;
+  }
+  #mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+  }
+  
+  /* HOVER BAR LOCATIONS */
+  /* #about {
+    top: 5vh;
+  }
+  #educ {
+    top: 20vh;
+  }
+  #research {
+    top: 35vh;
+  }
+  #hobbies {
+    top: 50vh;
+  }
+  #contact {
+    top: 65vh;
+  } */
+
