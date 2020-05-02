@@ -1,12 +1,48 @@
 body{
-    color: black;
-}
-
-p{
+    background: rgb(8, 56, 8);
     font-size: 1em;
+    color: white;
+    font-style: normal;
 }
+.social-links{
+    position: absolute;
+    width: 2.5%;
+}
+#mySidenav a {
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+    color: white; /* White text color */
+    font-size: 20px; /* Increase font size */
+    left: -80px; /* Position them outside of the screen */
+    padding: 15px; /* 15px padding */
+    position: absolute; /* Position them relative to the browser window */
+    text-decoration: none; /* Remove underline */
+    transition: 0.3s; /* Add transition on hover */
+    width: 100px; /* Set a specific width */
+  }
+  #mySidenav a:hover {
+    left: 0; /* On mouse-over, make the elements appear as they should */
+    background-color: rgb(19, 43, 19);
+  }
+  /* HOVER BAR LOCATIONS */
+  #about {
+    top: 20px;
+  }
+  #educ {
+    top: 80px;
+  }
+  #research {
+    top: 140px;
+  }
+  #hobbies {
+    top: 200px;
+  }
+  #contact {
+    top: 260px;
+  }
+  /* PERSONAL PICTURE STYLE */
+  #personal-pic{
+    position: absolute;
+    right: 50px;
+    width: 200px;
 
-p.highlighted{
-    font-size: 1.5em;
-    background: yellow;
-}
+  }
