@@ -3,6 +3,20 @@
     <head>
         <title>Alejandro Hirmas' Personal Website</title>
         <meta charset="utf-8">
+        <style>
+            body{
+                background: rgb(8, 56, 8);
+                font-size: 1em;
+                font-style: normal;
+            }
+            #phd{
+                font-style: italic;
+            }
+            tr.educ{
+                background-color: green;
+                border: 1px solid black;
+            }
+        </style>
     </head>
     <body>
         <h1>About me</h1>
@@ -20,12 +34,12 @@
                     <th>Degree</th>
                     <th>University</th>
                 </tr>
-                <tr>
+                <tr id="phd" class="educ">
                     <td>2019 <em>to date</em></td>
                     <td>PhD Economics </td>
                     <td>Universtiteit van Amsterdam</td>
                 </tr>
-                <tr>
+                <tr class="educ">
                     <td>2017/2019</td>
                     <td>MSc. Economics (<em>Behavioral Econ. track</em>)</td>
                     <td>Tinbergen Institute</td>
