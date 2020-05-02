@@ -4,45 +4,52 @@ body{
     color: white;
     font-style: normal;
 }
+/* LAYOUT STRUCTURE */
+.main-box{
+    position: absolute;
+    left: 22.5%;
+    right: 27.5%;
+}
 .social-links{
     position: absolute;
-    width: 2.5%;
+    width: 5%;
 }
 #mySidenav a {
-    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+    border-radius: 0 2.5% 2.5% 0; /* Rounded corners on the top right and bottom right side */
     color: white; /* White text color */
     font-size: 20px; /* Increase font size */
-    left: -80px; /* Position them outside of the screen */
+    left: -15%; /* Position them outside of the screen */
     padding: 15px; /* 15px padding */
     position: absolute; /* Position them relative to the browser window */
     text-decoration: none; /* Remove underline */
     transition: 0.3s; /* Add transition on hover */
-    width: 100px; /* Set a specific width */
+    width: 17.5%; /* Set a specific width */
+    background-color: #d9a30f;
   }
   #mySidenav a:hover {
     left: 0; /* On mouse-over, make the elements appear as they should */
-    background-color: rgb(19, 43, 19);
   }
   /* HOVER BAR LOCATIONS */
   #about {
-    top: 20px;
+    top: 2.5%;
   }
   #educ {
-    top: 80px;
+    top: 15%;
   }
   #research {
-    top: 140px;
+    top: 27.5%;
   }
   #hobbies {
-    top: 200px;
+    top: 40%;
   }
   #contact {
-    top: 260px;
+    top: 52.5%;
   }
   /* PERSONAL PICTURE STYLE */
   #personal-pic{
     position: absolute;
-    right: 50px;
-    width: 200px;
+    top: 5%;
+    right: 5%;
+    width: 20%;
 
   }
