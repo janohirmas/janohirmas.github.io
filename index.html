@@ -4,10 +4,11 @@
         <title>Alejandro Hirmas' Personal Website</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="myfunctions.js"></script>
     </head>
     <body>
         <div id="mySidenav" class="sidenav">
-            <a href="#" id="about">About Me</a>
+            <a href="javascript:void(0);" onclick="DisplayContent('about')">About Me</a>
             <a href="#" id="educ">Education</a>
             <a href="#" id="research">Research</a>
             <a href="#" id="hobbies">Hobbies</a>
@@ -15,7 +16,7 @@
         </div>
         <img src="images/profile.jpg" alt="me and my love" id="personal-pic">
         <div class="main-box">
-            <div>
+            <div id="about">
                 <h1>About me</h1>
             
                 <p>Hello stranger. My name is Alejandro Hirmas. If you are reading this, you want to know a little about me.
@@ -25,7 +26,7 @@
                 </p>
                 <p> <a href="https://www.instagram.com/janohirmas"><img src="images/Logos/instagram.svg" alt="" class="social-links"></a></p>
             </div>
-            <div>
+            <div id="educ">
                 <h1>Education</h1>
                 <table>
                     <tr>
@@ -53,10 +54,16 @@
                     </tr>
                 </table>
             </div>
-
-            <h2>Research</h2>
-            <a href="https://scholar.google.nl/citations?user=qna3bQIAAAAJ&hl=en&oi=ao">Google scholar </a>
-            <h2>CV</h2>
+            <div id="research">
+                <h1>Research</h1>
+                <a href="https://scholar.google.nl/citations?user=qna3bQIAAAAJ&hl=en&oi=ao">Google scholar </a>
+            </div>
+            <div id="hobbies">
+                <h1>Hobbies</h1>
+            </div>
+            <div id="contact">
+                <h1> Contact </h1>
+            </div>
         </div>
     </body>
 </html>

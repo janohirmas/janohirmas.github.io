@@ -62,19 +62,19 @@ body{
   }
   
   /* HOVER BAR LOCATIONS */
-  /* #about {
-    top: 5vh;
+  #about {
+    display: none;
   }
   #educ {
-    top: 20vh;
+    display: none;
   }
   #research {
-    top: 35vh;
+    display: none;
   }
   #hobbies {
-    top: 50vh;
+    display: none;
   }
   #contact {
-    top: 65vh;
-  } */
+    display: none;
+  }
 
