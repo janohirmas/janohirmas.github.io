@@ -8,15 +8,15 @@
     </head>
     <body>
         <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0);" onclick="DisplayContent('about')">About Me</a>
-            <a href="#" id="educ">Education</a>
-            <a href="#" id="research">Research</a>
-            <a href="#" id="hobbies">Hobbies</a>
-            <a href="#" id="contact">Contact</a>
+            <a href="javascript:void(0);" onclick="DisplayContent('Section-About')">About Me</a>
+            <a href="#" onclick="DisplayContent('Section-Educ')">Education</a>
+            <a href="#" onclick="DisplayContent('Section-Research')">Research</a>
+            <a href="#" onclick="DisplayContent('Section-Hobbies')">Hobbies</a>
+            <a href="#" onclick="DisplayContent('Section-Contact')">Contact</a>
         </div>
         <img src="images/profile.jpg" alt="me and my love" id="personal-pic">
-        <div class="main-box">
-            <div id="about">
+        <div class="main-box" class="section">
+            <div id="Section-About">
                 <h1>About me</h1>
             
                 <p>Hello stranger. My name is Alejandro Hirmas. If you are reading this, you want to know a little about me.
@@ -26,7 +26,7 @@
                 </p>
                 <p> <a href="https://www.instagram.com/janohirmas"><img src="images/Logos/instagram.svg" alt="" class="social-links"></a></p>
             </div>
-            <div id="educ">
+            <div id="Section-Educ" class="section">
                 <h1>Education</h1>
                 <table>
                     <tr>
@@ -54,14 +54,14 @@
                     </tr>
                 </table>
             </div>
-            <div id="research">
+            <div id="Section-Research" class="section">
                 <h1>Research</h1>
                 <a href="https://scholar.google.nl/citations?user=qna3bQIAAAAJ&hl=en&oi=ao">Google scholar </a>
             </div>
-            <div id="hobbies">
+            <div id="Section-Hobbies">
                 <h1>Hobbies</h1>
             </div>
-            <div id="contact">
+            <div id="Section-Contact">
                 <h1> Contact </h1>
             </div>
         </div>
