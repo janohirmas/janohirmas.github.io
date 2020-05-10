@@ -16,6 +16,7 @@
       margin: 2vh auto 0;
       max-width: 960px;
       text-align: justify;
+      width: 100%;
     }
     .main-box:after{
       visibility: hidden;
