@@ -53,7 +53,39 @@ body{
     font-size: 3.5vh;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.header{
+  display: block;
+  height: 25vh;
+}
+
 /* MAIN BOX */
+.header-nav{
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  float: right;
+}
+
+.header-nav > li {  
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.header-nav button{
+  background-color: rgb(3, 43, 3); 
+  border-radius: 20%;
+  color: white;
+  display: inline-block;
+  font-size: 1rem;
+  height: 5em;
+  line-height: 1em;
+  padding: 1.75em 0;
+  text-align: center;
+  text-decoration: none;
+  width: 5em;
+  
+}
 .main-box{
     float: left;
     margin: 2vh auto 0;
@@ -83,9 +115,6 @@ body{
     height: 30vh;
     overflow: hidden;
   }
-  .full-hero > a a:link a:visited {
-      color: white;
-  }
   .full-hero:after{
     visibility: hidden;
     display: block;
@@ -99,20 +128,4 @@ body{
   width: 5vh;
   height: 5vh;
 }
-.link-list{
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-.link-list > li {
-  background: rgb(3, 43, 3);
-  border-radius: 100%;
-  box-sizing: border-box;
-  color: white;
-  display: inline-block;
-  font-size: 1rem;
-  height: 5em;
-  line-height: 1em;
-  padding: 1.75em 0;
-  width: 5em;
-}
+

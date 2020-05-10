@@ -1,22 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Alejandro Hirmas' Personal Website</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script type="text/javascript" src="myfunctions.js"></script>
-    </head>
+    {% include head.html %}
     <body>
-        <div class="full-hero">
-            <ul class="link-list">
-                <li><a href="javascript:void(0);" onclick="DisplayContent('Section-About')">About Me</a></li>
-                <li><a href="#" onclick="DisplayContent('Section-Educ')">Education</a></li>
-                <li><a href="#" onclick="DisplayContent('Section-Research')">Research</a></li>
-                <li><a href="#" onclick="DisplayContent('Section-Hobbies')">Hobbies</a></li>
-                <li><a href="#" onclick="DisplayContent('Section-Contact')">Contact</a></li>
-            </ul>
-        </div>
+        {% include header.html %}
+
         <div class="main-box">
             <div id="Section-About" class="content-box">
                 <h1>About me</h1>
