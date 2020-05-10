@@ -12,11 +12,10 @@
 /* LAYOUT STRUCTURE */
   /* MAIN BOX */
     .main-box{
-      box-sizing: border-box;
       float: left;
+      margin: 2vh auto 0;
+      max-width: 960px;
       text-align: justify;
-      margin: auto;
-      width: 70vw;
     }
     .main-box:after{
       visibility: hidden;
@@ -28,15 +27,16 @@
     .content-box{
       border: solid lightgreen;
       box-sizing: border-box;
+      float: left;
       font-size: 1rem;
-      margin: 2vh 1w;
+      margin: 2vh auto 0;
       padding: 2vw;
       width: 70vw;
     }
   /* HERO  */
     .full-hero{
       background-color: green;
-      height: 10vh;
+      height: 30vh;
       overflow: scroll;
     }
     .full-hero:after{
@@ -58,12 +58,21 @@
     text-align: center;
   }
   .link-list > li {
+    background: rgb(3, 43, 3);
+    border-radius: 100%;
+    box-sizing: border-box;
+    color: white;
     display: inline-block;
+    font-size: 1rem;
+    height: 5em;
+    line-height: 1em;
+    padding: 1.75em 0;
+    width: 5em;
   }
 /* PERSONAL PICTURE STYLE */
 #personal-pic{
-  float: right;
-  width: 20vw;
+  width: 25%;
+  display: inline-block;
 }
 
 
