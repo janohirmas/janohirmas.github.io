@@ -7,26 +7,32 @@
         <script type="text/javascript" src="myfunctions.js"></script>
     </head>
     <body>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0);" onclick="DisplayContent('Section-About')">About Me</a>
-            <a href="#" onclick="DisplayContent('Section-Educ')">Education</a>
-            <a href="#" onclick="DisplayContent('Section-Research')">Research</a>
-            <a href="#" onclick="DisplayContent('Section-Hobbies')">Hobbies</a>
-            <a href="#" onclick="DisplayContent('Section-Contact')">Contact</a>
+        <div class="full-hero">
+            <ul class="link-list">
+                <li><a href="javascript:void(0);" onclick="DisplayContent('Section-About')">About Me</a></li>
+                <li><a href="#" onclick="DisplayContent('Section-Educ')">Education</a></li>
+                <li><a href="#" onclick="DisplayContent('Section-Research')">Research</a></li>
+                <li><a href="#" onclick="DisplayContent('Section-Hobbies')">Hobbies</a></li>
+                <li><a href="#" onclick="DisplayContent('Section-Contact')">Contact</a></li>
+            </ul>
         </div>
         <img src="images/profile.jpg" alt="me and my love" id="personal-pic">
-        <div class="main-box" class="section">
-            <div id="Section-About">
+        <div class="main-box">
+            <div id="Section-About" class="content-box">
                 <h1>About me</h1>
-            
-                <p>Hello stranger. My name is Alejandro Hirmas. If you are reading this, you want to know a little about me.
+                <p>
+                    Hello stranger. My name is Alejandro Hirmas. If you are reading this, you want to know a little about me.
                     I am chilean, a behavior economist, speak Spanish, English and have a <em>bar-talking</em> proficiency in 
                     French, German and Dutch (currently on development). In my spare time I like to climb, do yoga, play pool, go out for drinks and dancing. 
                     I'm curious and eager to learn and do new things. In case you need pictures to believe me:
                 </p>
-                <p> <a href="https://www.instagram.com/janohirmas"><img src="images/Logos/instagram.svg" alt="" class="social-links"></a></p>
+                <p> 
+                    <a href="https://www.instagram.com/janohirmas">
+                        <img src="images/Logos/instagram.svg" alt="" class="social-links">
+                    </a>
+                </p>
             </div>
-            <div id="Section-Educ" class="section">
+            <div id="Section-Educ"  class="content-box">
                 <h1>Education</h1>
                 <table>
                     <tr>
@@ -54,14 +60,14 @@
                     </tr>
                 </table>
             </div>
-            <div id="Section-Research" class="section">
+            <div id="Section-Research"  class="content-box">
                 <h1>Research</h1>
                 <a href="https://scholar.google.nl/citations?user=qna3bQIAAAAJ&hl=en&oi=ao">Google scholar </a>
             </div>
-            <div id="Section-Hobbies">
+            <div id="Section-Hobbies" class="content-box">
                 <h1>Hobbies</h1>
             </div>
-            <div id="Section-Contact">
+            <div id="Section-Contact" class="content-box">
                 <h1> Contact </h1>
             </div>
         </div>

@@ -1,80 +1,112 @@
-html{
+/* MAIN  */
+  html{
     margin: 0 0;
-}
-body{
+  }
+  body{
     background: rgb(8, 56, 8);
     color: white;
     font-size: 3.5vh;
     font-style: normal;
     
-}
-/* LAYOUT STRUCTURE */
-.main-box{
-    display: inline-block;
-    width: 70vw;
-    text-align: justify;
-    box-sizing: border-box;
-}
-
-/* PERSONAL PICTURE STYLE */
-  #personal-pic{
-    position: absolute;
-    top: 5vh;
-    right: 5%;
-    width: 20%;
-
   }
-
-/* HERO STYLES */
-.full-hero{
-    background-color: green;
-    height: 25vh;
-}
-.social-links{
+/* LAYOUT STRUCTURE */
+  /* MAIN BOX */
+    .main-box{
+      box-sizing: border-box;
+      float: left;
+      text-align: justify;
+      margin: auto;
+      width: 70vw;
+    }
+    .main-box:after{
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      clear: both;
+      height: 0;
+    }
+    .content-box{
+      border: solid lightgreen;
+      box-sizing: border-box;
+      font-size: 1rem;
+      margin: 2vh 1w;
+      padding: 2vw;
+      width: 70vw;
+    }
+  /* HERO  */
+    .full-hero{
+      background-color: green;
+      height: 10vh;
+      overflow: scroll;
+    }
+    .full-hero:after{
+      visibility: hidden;
+      display: block;
+      font-size: 0;
+      clear: both;
+      height: 0;
+    } 
+/* LINKS */    
+  .social-links{
     float: right;
-    position: absolute;
     width: 5vh;
-}
-#mySidenav {
-    
-    width: 20vw;
+    height: 5vh;
+  }
+  .link-list{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  .link-list > li {
     display: inline-block;
-    box-sizing: border-box;
+  }
+/* PERSONAL PICTURE STYLE */
+#personal-pic{
+  float: right;
+  width: 20vw;
+}
+
+
+#mySidenav {
+  
+  width: 20vw;
+  display: inline-block;
+  box-sizing: border-box;
 }
 #mySidenav a {
-    background-color: #d9a30f;
-    box-sizing: border-box;
-    border-radius: 0 2.5vh 2.5vh 0; /* Rounded corners on the top right and bottom right side */
-    color: white; /* White text color */
-    display: block;
-    font-size: 5vh; /* Increase font size */
-    left: -25vh; /* Position them outside of the screen */
-    padding: 2.5vh; /* 15px padding */
-    position: relative ; /* Position them relative to the browser window */
-    margin: 2vh 0;
-    text-decoration: none; /* Remove underline */
-    transition: 0.4s; /* Add transition on hover */
-    width: 17.5vw; /* Set a specific width */
-    height: 10vh;
+  background-color: #d9a30f;
+  border-radius: 0 2.5vh 2.5vh 0; /* Rounded corners on the top right and bottom right side */
+  box-sizing: border-box;
+  color: white; /* White text color */
+  display: block;
+  font-size: 5vh; /* Increase font size */
+  height: 10vh;
+  left: -25vh; /* Position them outside of the screen */
+  margin: 2vh 0;
+  padding: 2.5vh; /* 15px padding */
+  position: relative ; /* Position them relative to the browser window */
+  text-decoration: none; /* Remove underline */
+  transition: 0.4s; /* Add transition on hover */
+  width: 17.5vw; /* Set a specific width */
   }
-  #mySidenav a:hover {
-    left: 0; /* On mouse-over, make the elements appear as they should */
-  }
-  
-  /* HOVER BAR LOCATIONS */
-  #Section-About {
-    display: none;
-  }
-  #Section-Educ {
-    display: none;
-  }
-  #Section-Research {
-    display: none;
-  }
-  #Section-Hobbies {
-    display: none;
-  }
-  #Section-Contact {
-    display: none;
-  }
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* HOVER BAR LOCATIONS */
+#Section-About {
+  display: none;
+}
+#Section-Educ {
+  display: none;
+}
+#Section-Research {
+  display: none;
+}
+#Section-Hobbies {
+  display: none;
+}
+#Section-Contact {
+  display: none;
+}
 
