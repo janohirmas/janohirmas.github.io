@@ -1,9 +1,13 @@
 function DisplayContent(ID) {
-    // $("div").not(ID).style.display = "none";
-    var x = document.getElementById(ID);
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
+  HideEverything();
+  let x = document.getElementById(ID);
+  x.style.display = "block";
+}
+
+function HideEverything() {
+  let x = document.getElementsByClassName("content-box");
+  // console.log(x);
+  for(let i = 0; i<x.length; i++) {
+    x[i].style.display = "none";
   }
+}

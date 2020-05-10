@@ -37,7 +37,7 @@
     .full-hero{
       background-color: green;
       height: 30vh;
-      overflow: scroll;
+      overflow: hidden;
     }
     .full-hero:after{
       visibility: hidden;
