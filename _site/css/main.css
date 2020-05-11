@@ -46,25 +46,37 @@ a img {
 }
 /* END RESET*/
 
-/* GLOBAL SECTION */
-body{
-    background: rgb(8, 56, 8);
-    color: white;
-    font-size: 3.5vh;
-    font-family: Arial, Helvetica, sans-serif;
+/* HEADER SECTION */
+html{
+  padding: 30px;
+  box-shadow: 0 0 0 30px   rgba(0, 75, 0, 1) inset;
+  min-height: 100vh;
 }
 
 .header{
+  top: -30px;
+  left: -30px;
+  background-color: rgb(0, 75, 0) ;
   display: block;
   height: 25vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 20;
+}
+.header-logo {
+  transform: translate(-50%,-50%);
+  left: 55px;
+  top: 55px;
+  position: relative;
 }
 
-/* MAIN BOX */
 .header-nav{
+  float: right;
   list-style: none;
+  margin-top: 15vh;
   padding: 0;
   text-align: center;
-  float: right;
+  transform: translate(0,-50%);
 }
 
 .header-nav > li {  
@@ -86,6 +98,25 @@ body{
   width: 5em;
   
 }
+
+.header-nav button:hover,
+.header-nav button:active{
+  background-color: rgb(1, 22, 1);   
+}
+/* MAIN SECTION */
+body{
+    background: #fff;
+    color: #000;
+    font-size: 3.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/* MAIN BOX */
+
 .main-box{
     float: left;
     margin: 2vh auto 0;
@@ -111,7 +142,7 @@ body{
   }
 /* HERO  */
   .full-hero{
-    background-color: green;
+    background-color: #fff;
     height: 30vh;
     overflow: hidden;
   }
