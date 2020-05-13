@@ -1,10 +1,11 @@
-function DisplayContent(Act) {
+function DisplayContent(Act,Val) {
   HideEverything();
   let x = document.getElementsByClassName(Act);
   for(let i = 0; i<x.length; i++) {
     x[i].classList.remove('hidden');
     x[i].classList.add('non-hidden');
   }
+
 }
 
 function HideEverything() {

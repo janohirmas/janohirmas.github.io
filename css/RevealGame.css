@@ -5,6 +5,9 @@
     --table-width: 30vw;
     --action-font-size: 2vw;
     --table-side-margin: 15vw;
+    --table-top-margin: 10vw;
+    --outcome-background-color: #bbb;
+    --outcome-text-color: #000;
 }
 
 body {
@@ -15,7 +18,7 @@ body {
 
 .gametable-sep {
     position: absolute;
-    top: 20vh;
+    top: var(--table-top-margin);
     border-collapse: collapse;
     border-spacing: 0;
     box-sizing: border-box;
@@ -54,15 +57,16 @@ body {
 }
 
 .button-outcome {
-    background-color: #eee; 
-    border: none;
-    color: #eee;
+    background-color: var(--outcome-background-color);
+    border-width: 0.5px;
+    color: var(--outcome-text-color);
 }
 
 .hidden {
-    color: #eee;
+    color:  var(--outcome-background-color);
   }
 
 .non-hidden {
-    color: #000;
+    color: var(--outcome-text-color);
+}
 }
