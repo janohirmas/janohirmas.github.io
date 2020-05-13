@@ -1,24 +1,56 @@
-.button-action {
-    background-color: #999; 
+:root {
+    --sq-height: 10vw;
+    --sq-width: 10vw;
+    --table-heigth: 40vw;
+    --table-width: 40vw;
+    --action-font-size: 2vw;
+}
+
+body {
+    background-color: #333;
+    padding: 0 0;
+}
+
+.gametable-sep {
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-sizing: border-box;
+    height: var(--table-height);
+    overflow: hidden;
+    width: var(--table-width);
+}
+
+.gametable-sep th, .gametable-sep td {
+    height: var(--sq-height);
+    width: var(--sq-width);
+}
+
+.button-game {
+    box-sizing: border-box;
     color: #000;
-    font-size: 1vw;
-    height: 5vh;
-    line-height: 1vw;
-    padding: 1.75em 0;
+    font-size: var(--action-font-size);
+    height: 100%;
+    line-height: var(--action-font-size);
     text-align: center;
     text-decoration: none;
-    width: 5vh;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.button-action {
+    background-color: #999; 
 }
 
 .button-outcome {
     background-color: #eee; 
-    color: #000;
-    font-size: 1vw;
-    height: 5vh;
-    line-height: 1vw;
-    padding: 1.75em 0;
-    text-align: center;
-    text-decoration: none;
-    width: 5vh;
     border: none;
+    color: #eee;
+}
+
+.hidden {
+    color: #eee;
+  }
+
+.non-hidden {
+    color: #000;
 }

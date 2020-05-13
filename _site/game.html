@@ -1,30 +1,103 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    <title>Alejandro Hirmas' Personal Website</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/RevealGame.css">
-    <script type="text/javascript" src="myfunctions.js"></script>
-</head>
-    <body>
-        <header class="header">
-    <nav>
-        <ul class="header-nav">
-            <li><button onclick="DisplayContent('Section-About')">About Me</button></li>
-            <li><button onclick="DisplayContent('Section-Educ')">Education </button></li>
-            <li><button onclick="DisplayContent('Section-Research')">Research</button></li>
-            <li><button onclick="DisplayContent('Section-Hobbies')">Hobbies </button></li>
-            <li><button onclick="DisplayContent('Section-Contact')">Contact</button> </li>
-            <li><button onclick="location.href='game.html';">Game</button>  </li>
-        </ul>
-    </nav>
-    <a href="index.html" class="header-logo"> <svg width="25vh" height="25vh">
-    <circle cx="50" cy="50" r="40" stroke="#030" stroke-width="4" fill="#060" />
-</svg> </a>
-</header>
+<!-- ---
+layout: default
+---
+ -->
 
-        
-    </body>
-</html>
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Alejandro Hirmas' Personal Website</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/RevealGame.css">
+        <script type="text/javascript" src="myfunctions.js"></script>
+    </head>
+     <body>
+        <table class="gametable-sep">
+            <tr>
+                <th> </th>
+                <th>
+                    <button onclick="DisplayContent('col-x')" class="button-game button-action"> 
+                        X
+                    </button>
+                </th>
+                <th>
+                    <button onclick="DisplayContent('col-y')" class="button-game button-action"> 
+                        Y 
+                    </button>
+                </th>
+                <th>
+                    <button onclick="DisplayContent('col-z')" class="button-game button-action"> 
+                        Z 
+                    </button>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="DisplayContent('row-a')" class="button-game button-action "> 
+                        A 
+                    </button>
+                </td>
+                <td>
+                    <button class="button-game button-outcome row-a col-x" id="self-ax"> 
+                        1 
+                    </button>
+                </td>
+                <td>
+                    <button class="button-game button-outcome row-a col-y" id="self-ay"> 
+                        2 
+                    </button>
+                </td>
+                <td>
+                    <button class="button-game button-outcome row-a col-z" id="self-az"> 
+                        3 
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="DisplayContent('row-b')" class="button-game button-action"> 
+                        B 
+                    </button>
+                </td>
+                <td>
+                    <button class="button-game button-outcome row-b col-x" id="self-bx"> 
+                        2 
+                    </button>
+                </td>
+                <td>
+                    <button class="button-game button-outcome row-b col-y" id="self-by"> 
+                        3 
+                    </button>
+                </td>
+                <td>
+                    <button class="button-game button-outcome row-b col-z" id="self-bz"> 
+                        4
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="DisplayContent('row-c')" class="button-game button-action"> 
+                        C 
+                    </button>
+                </td>
+                <td>
+                    <button class="button-game button-outcome row-c col-x" id="self-cx"> 
+                        4 
+                    </button>
+                </td>
+                <td>
+                    <button class="button-game button-outcome row-c col-y" id="self-cy"> 
+                        5 
+                    </button>
+                </td>
+                <td>
+                    <button class="button-game button-outcome row-c col-z" id="self-cz"> 
+                        6 
+                    </button>
+                </td>
+            </tr>
+            </table>
+     </body>
+ </html>

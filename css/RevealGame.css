@@ -44,10 +44,13 @@ body {
 .button-outcome {
     background-color: #eee; 
     border: none;
-    display: block;
+    color: #eee;
 }
 
-.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+.hidden {
+    color: #eee;
   }
+
+.non-hidden {
+    color: #000;
+}
