@@ -13,91 +13,178 @@ layout: default
         <script type="text/javascript" src="myfunctions.js"></script>
     </head>
      <body>
-        <table class="gametable-sep">
+        <table class="gametable-sep table-left">
             <tr>
                 <th> </th>
                 <th>
-                    <button onclick="DisplayContent('col-x')" class="button-game button-action"> 
+                    <button onclick="DisplayContent('col-x self')" class="button-game button-action"> 
                         X
                     </button>
                 </th>
                 <th>
-                    <button onclick="DisplayContent('col-y')" class="button-game button-action"> 
+                    <button onclick="DisplayContent('col-y self')" class="button-game button-action"> 
                         Y 
                     </button>
                 </th>
                 <th>
-                    <button onclick="DisplayContent('col-z')" class="button-game button-action"> 
+                    <button onclick="DisplayContent('col-z self')" class="button-game button-action"> 
                         Z 
                     </button>
                 </th>
             </tr>
             <tr>
                 <td>
-                    <button onclick="DisplayContent('row-a')" class="button-game button-action "> 
+                    <button onclick="DisplayContent('row-a self')" class="button-game button-action "> 
                         A 
                     </button>
                 </td>
                 <td>
-                    <button class="button-game button-outcome row-a col-x" id="self-ax"> 
+                    <button onclick="DisplayContent('row-a col-x')" class="button-game button-outcome row-a col-x self" id="self-ax"> 
                         1 
                     </button>
                 </td>
                 <td>
-                    <button class="button-game button-outcome row-a col-y" id="self-ay"> 
+                    <button onclick="DisplayContent('row-a col-y')" class="button-game button-outcome row-a col-y self" id="self-ay"> 
                         2 
                     </button>
                 </td>
                 <td>
-                    <button class="button-game button-outcome row-a col-z" id="self-az"> 
+                    <button onclick="DisplayContent('row-a col-z')" class="button-game button-outcome row-a col-z self" id="self-az"> 
                         3 
                     </button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button onclick="DisplayContent('row-b')" class="button-game button-action"> 
+                    <button onclick="DisplayContent('row-b self')" class="button-game button-action"> 
                         B 
                     </button>
                 </td>
                 <td>
-                    <button class="button-game button-outcome row-b col-x" id="self-bx"> 
+                    <button onclick="DisplayContent('row-b col-x')" class="button-game button-outcome row-b col-x self" id="self-bx"> 
                         2 
                     </button>
                 </td>
                 <td>
-                    <button class="button-game button-outcome row-b col-y" id="self-by"> 
+                    <button onclick="DisplayContent('row-b col-y')" class="button-game button-outcome row-b col-y self" id="self-by"> 
                         3 
                     </button>
                 </td>
                 <td>
-                    <button class="button-game button-outcome row-b col-z" id="self-bz"> 
+                    <button onclick="DisplayContent('row-b col-z')" class="button-game button-outcome row-b col-z self" id="self-bz"> 
                         4
                     </button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button onclick="DisplayContent('row-c')" class="button-game button-action"> 
+                    <button onclick="DisplayContent('row-c self')" class="button-game button-action"> 
                         C 
                     </button>
                 </td>
                 <td>
-                    <button class="button-game button-outcome row-c col-x" id="self-cx"> 
+                    <button onclick="DisplayContent('row-c col-x')" class="button-game button-outcome row-c col-x self" id="self-cx"> 
                         4 
                     </button>
                 </td>
                 <td>
-                    <button class="button-game button-outcome row-c col-y" id="self-cy"> 
+                    <button onclick="DisplayContent('row-c col-y')" class="button-game button-outcome row-c col-y self" id="self-cy"> 
                         5 
                     </button>
                 </td>
                 <td>
-                    <button class="button-game button-outcome row-c col-z" id="self-cz"> 
+                    <button onclick="DisplayContent('row-c col-z')" class="button-game button-outcome row-c col-z self" id="self-cz"> 
                         6 
                     </button>
                 </td>
             </tr>
             </table>
+
+            <table class="gametable-sep table-right">
+                <tr>
+                    <th> </th>
+                    <th>
+                        <button onclick="DisplayContent('col-x other')" class="button-game button-action"> 
+                            X
+                        </button>
+                    </th>
+                    <th>
+                        <button onclick="DisplayContent('col-y other')" class="button-game button-action"> 
+                            Y 
+                        </button>
+                    </th>
+                    <th>
+                        <button onclick="DisplayContent('col-z other')" class="button-game button-action"> 
+                            Z 
+                        </button>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="DisplayContent('row-a other')" class="button-game button-action "> 
+                            A 
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="DisplayContent('row-a col-x')" class="button-game button-outcome row-a col-x other" id="self-ax"> 
+                            1 
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="DisplayContent('row-a col-y')" class="button-game button-outcome row-a col-y other" id="self-ay"> 
+                            2 
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="DisplayContent('row-a col-z')" class="button-game button-outcome row-a col-z other" id="self-az"> 
+                            3 
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="DisplayContent('row-b other')" class="button-game button-action"> 
+                            B 
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="DisplayContent('row-b col-x')" class="button-game button-outcome row-b col-x other" id="self-bx"> 
+                            2 
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="DisplayContent('row-b col-y')" class="button-game button-outcome row-b col-y other" id="self-by"> 
+                            3 
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="DisplayContent('row-b col-z')" class="button-game button-outcome row-b col-z other" id="self-bz"> 
+                            4
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="DisplayContent('row-c other')" class="button-game button-action"> 
+                            C 
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="DisplayContent('row-c col-x')" class="button-game button-outcome row-c col-x other" id="self-cx"> 
+                            4 
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="DisplayContent('row-c col-y')" class="button-game button-outcome row-c col-y other" id="self-cy"> 
+                            5 
+                        </button>
+                    </td>
+                    <td>
+                        <button onclick="DisplayContent('row-c col-z')" class="button-game button-outcome row-c col-z other" id="self-cz"> 
+                            6 
+                        </button>
+                    </td>
+                </tr>
+                </table>
      </body>
  </html>
