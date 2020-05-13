@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
+    <head>
+    <title>Alejandro Hirmas' Personal Website</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/RevealGame.css">
+    <script type="text/javascript" src="myfunctions.js"></script>
+</head>
     <body>
-        {% include header.html %}
+        <header class="header">
+    <nav>
+        <ul class="header-nav">
+            <li><button onclick="DisplayContent('Section-About')">About Me</button></li>
+            <li><button onclick="DisplayContent('Section-Educ')">Education </button></li>
+            <li><button onclick="DisplayContent('Section-Research')">Research</button></li>
+            <li><button onclick="DisplayContent('Section-Hobbies')">Hobbies </button></li>
+            <li><button onclick="DisplayContent('Section-Contact')">Contact</button> </li>
+            <li><button onclick="location.href='game.html';">Game</button>  </li>
+        </ul>
+    </nav>
+    <a href="index.html" class="header-logo"> <svg width="25vh" height="25vh">
+    <circle cx="50" cy="50" r="40" stroke="#030" stroke-width="4" fill="#060" />
+</svg> </a>
+</header>
 
         
     </body>
