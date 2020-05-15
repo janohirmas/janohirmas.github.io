@@ -89,13 +89,18 @@ html{
 .header-nav a{
   color: white;
   display: inline-block;
-  font-size: 1vw;
-  line-height: 1vw;
+  font-size: 1em;
+  line-height: 1em;
   padding: 2vh 2vh;
   height: 5vh;
   text-align: center;
   text-decoration: none;
+  border-left: #fff 1px solid ;
 }
+
+.header-nav a:first {
+  border-color: hotpink ;
+} 
 
 .header-nav a:hover{
   background-color: green;
@@ -147,7 +152,7 @@ body{
   background-position: center top;
 }
 
-.hero-educ {
+.hero-teaching {
   background-image: url(/images/forest.jpg!d);
   background-position: center top;
 }
