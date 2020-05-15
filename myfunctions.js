@@ -1,4 +1,4 @@
-function DisplayContent(Act,Val) {
+function DisplayContent(Act,val='') {
   HideEverything();
   let x = document.getElementsByClassName(Act);
   for(let i = 0; i<x.length; i++) {

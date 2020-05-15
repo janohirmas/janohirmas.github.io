@@ -50,7 +50,7 @@ a img {
 html{
   padding: 30px;
   box-shadow: 0 0 0 30px   rgb(0,0,0) inset;
-  min-height: 100vh;
+  min-height: 95vh;
 }
 
 .header{
@@ -65,8 +65,8 @@ html{
 }
 .header-logo {
   transform: translate(-50%,-50%);
-  left: 55px;
-  top: 55px;
+  left: 5vw;
+  top: 5vh;
   position: relative;
 }
 
@@ -84,25 +84,23 @@ html{
   display: inline-block;
 }
 
-.header-nav button{
-  background-color: rgb(3, 43, 3); 
-  border-radius: 20%;
+
+
+.header-nav a{
   color: white;
   display: inline-block;
-  font-size: 1rem;
-  height: 5em;
-  line-height: 1em;
-  padding: 1.75em 0;
+  font-size: 1vw;
+  line-height: 1vw;
+  padding: 2vh 2vh;
+  height: 5vh;
   text-align: center;
   text-decoration: none;
-  width: 5em;
-  
 }
 
-.header-nav button:hover,
-.header-nav button:active{
-  background-color: rgb(1, 22, 1);   
+.header-nav a:hover{
+  background-color: green;
 }
+
 /* MAIN SECTION */
 body{
     background: #fff;
@@ -111,7 +109,55 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.full-hero {
+  background-color: #c7dbfc;
+  box-sizing: border-box;
+  height: 95vh;
+  padding-top: 50vh;
+  background-size: cover;
+}
 
+.full-hero:after {
+  bottom: 2vh;
+  border: 10px solid;
+  border-color: #fff transparent transparent;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 0;
+}
+.hero-content{
+  position: absolute;
+  top: 29vh;
+  left: 3vw;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 5vw;
+  transform: translate(0, -50%);
+}
+
+.hero-educ {
+  background-image: url(/images/vlissingen2.jpg);
+  background-position: center top;
+}
+
+.hero-about {
+  background-image: url(/images/Krka_Croatia.jpg);
+  background-position: center top;
+}
+
+.hero-educ {
+  background-image: url(/images/forest.jpg!d);
+  background-position: center top;
+}
+
+
+
+.hero-home {
+  background-image: url(/images/forest.jpg!d);
+  background-position: center top;
+}
 
 
 
@@ -140,19 +186,8 @@ body{
     padding: 2vw;
     width: 70vw;
   }
-/* HERO  */
-  .full-hero{
-    background-color: #fff;
-    height: 30vh;
-    overflow: hidden;
-  }
-  .full-hero:after{
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    clear: both;
-    height: 0;
-  } 
+
+
 /* LINKS */    
 .social-links{
   float: right;

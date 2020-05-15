@@ -59,7 +59,7 @@ body {
 .button-outcome {
     background-color: var(--outcome-background-color);
     border-width: 0.5px;
-    color: var(--outcome-text-color);
+    color: var(--outcome-background-color);
 }
 
 .hidden {

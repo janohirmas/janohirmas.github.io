@@ -1,25 +1,40 @@
 :root {
-    --sq-height: 10vw;
-    --sq-width: 10vw;
-    --table-heigth: 40vw;
-    --table-width: 40vw;
+    --sq-height: 7.5vw;
+    --sq-width: 7.5vw;
+    --table-heigth: 30vw;
+    --table-width: 30vw;
     --action-font-size: 2vw;
+    --table-side-margin: 15vw;
+    --table-top-margin: 10vw;
+    --outcome-background-color: #bbb;
+    --outcome-text-color: #000;
 }
 
 body {
+    box-sizing: border-box;
     background-color: #333;
     padding: 0 0;
 }
 
 .gametable-sep {
+    position: absolute;
+    top: var(--table-top-margin);
     border-collapse: collapse;
     border-spacing: 0;
     box-sizing: border-box;
     height: var(--table-height);
     overflow: hidden;
     width: var(--table-width);
+    margin: 0;
 }
 
+.table-left {
+    left: var(--table-side-margin);
+}
+
+.table-right {
+    right: var(--table-side-margin);
+}
 .gametable-sep th, .gametable-sep td {
     height: var(--sq-height);
     width: var(--sq-width);
@@ -42,15 +57,16 @@ body {
 }
 
 .button-outcome {
-    background-color: #eee; 
-    border: none;
-    color: #eee;
+    background-color: var(--outcome-background-color);
+    border-width: 0.5px;
+    color: var(--outcome-background-color);
 }
 
 .hidden {
-    color: #eee;
+    color:  var(--outcome-background-color);
   }
 
 .non-hidden {
-    color: #000;
+    color: var(--outcome-text-color);
+}
 }
