@@ -1,18 +1,17 @@
 :root {
-    --sq-height: 7.5vw;
-    --sq-width: 7.5vw;
-    --table-heigth: 30vw;
-    --table-width: 30vw;
-    --action-font-size: 2vw;
-    --table-side-margin: 15vw;
-    --table-top-margin: 10vw;
+    --sq-height: 5vw;
+    --sq-width: 5vw;
+    --table-heigth: 20vw;
+    --table-width: 20vw;
+    --action-font-size: 1.5em;
+    --table-side-margin: 25vw;
+    --table-top-margin: 20vw;
     --outcome-background-color: #bbb;
     --outcome-text-color: #000;
 }
 
 .game-body {
     box-sizing: border-box;
-    background-color: #333;
     padding: 0 0;
 }
 

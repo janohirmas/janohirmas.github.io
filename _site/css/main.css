@@ -108,11 +108,11 @@ body{
   height: 1em;
   text-align: center;
   text-decoration: none;
-  border-left: rgb(0, 100, 0) 1px solid ;
+  border-left: rgba(0, 100, 0, 1) 1px solid ;
 }
 
 .header-nav > li:first-child a {
-  border-left: rgb(0, 100, 0) 0px solid ;
+  border-left: 0px ;
 }
 
 .header-nav a:hover{
