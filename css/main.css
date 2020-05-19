@@ -46,21 +46,33 @@ a img {
 }
 /* END RESET*/
 
-/* HEADER SECTION */
+/* MAIN SECTION */
 html{
-  padding: 30px;
-  box-shadow: 0 0 0 30px   rgb(0,0,0) inset;
+  padding: 30px 2.5vw;
   min-height: 95vh;
 }
 
+body{
+    background-color: #eee;
+    color: #000;
+    font-size: 1em;
+    font-family: Candara, Garamond, Helvetica, sans-serif;
+}
+
+/* HEADER SECTION */
+
 .header{
-  top: -30px;
-  left: -30px;
-  background-color: rgb(0, 0, 0) ;
+  /* top: -30px;
+  left: -30px; */
+  background-color: #eee;
+  border-width: 1px 0 1px;
+  border-color: rgb(0, 100, 0);
+  border-style: solid;
+  box-sizing: border-box;
   display: block;
   height: 25vh;
-  width: 100vw;
-  position: fixed;
+  width: 95vw;
+  position: relative;
   z-index: 20;
 }
 .header-logo {
@@ -71,12 +83,15 @@ html{
 }
 
 .header-nav{
-  float: right;
+  position: absolute;
+  box-sizing: border-box;
+  display: inline-block;
+  top: 15vh;
+  right: 1vw;
   list-style: none;
-  margin-top: 15vh;
   padding: 0;
   text-align: center;
-  transform: translate(0,-50%);
+  /* transform: translate(0,-50%); */
 }
 
 .header-nav > li {  
@@ -84,35 +99,27 @@ html{
   display: inline-block;
 }
 
-
-
 .header-nav a{
-  color: white;
+  color: rgba(0, 100, 0,0.5);
   display: inline-block;
   font-size: 1em;
   line-height: 1em;
-  padding: 2vh 2vh;
-  height: 5vh;
+  padding: 1vh 5px 1vh;
+  height: 1em;
   text-align: center;
   text-decoration: none;
-  border-left: #fff 1px solid ;
+  border-left: rgb(0, 100, 0) 1px solid ;
 }
 
-.header-nav a:first {
-  border-color: hotpink ;
-} 
+.header-nav > li:first-child a {
+  border-left: rgb(0, 100, 0) 0px solid ;
+}
 
 .header-nav a:hover{
-  background-color: green;
+  color: rgba(0, 100, 0,1);
 }
 
-/* MAIN SECTION */
-body{
-    background: #fff;
-    color: #000;
-    font-size: 3.5vh;
-    font-family: Arial, Helvetica, sans-serif;
-}
+/* HERO */
 
 .full-hero {
   background-color: #c7dbfc;
@@ -142,27 +149,6 @@ body{
   transform: translate(0, -50%);
 }
 
-.hero-educ {
-  background-image: url(/images/vlissingen2.jpg);
-  background-position: center top;
-}
-
-.hero-about {
-  background-image: url(/images/Krka_Croatia.jpg);
-  background-position: center top;
-}
-
-.hero-teaching {
-  background-image: url(/images/forest.jpg!d);
-  background-position: center top;
-}
-
-
-
-.hero-home {
-  background-image: url(/images/forest.jpg!d);
-  background-position: center top;
-}
 
 
 

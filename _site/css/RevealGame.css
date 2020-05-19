@@ -10,7 +10,7 @@
     --outcome-text-color: #000;
 }
 
-body {
+.game-body {
     box-sizing: border-box;
     background-color: #333;
     padding: 0 0;
