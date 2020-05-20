@@ -49,7 +49,7 @@ a img {
 /* MAIN SECTION */
 html{
   padding: 30px 2.5vw;
-  min-height: 95vh;
+
 }
 
 body{
@@ -57,6 +57,7 @@ body{
     color: rgb(0, 100, 70);
     font-size: 1em;
     font-family: Candara, Garamond, Helvetica, sans-serif;
+    min-height: 110vh;
 }
 
 h1 {
@@ -82,7 +83,7 @@ a {
   box-sizing: border-box;
   display: block;
   height: 25vh;
-  width: 100%;
+  width: 95vw;
   position: absolute;
   z-index: 20;
 }
@@ -96,7 +97,7 @@ a {
     text-transform: uppercase;
     top: 10vh;
     position: absolute;
-    left: 50vw;
+    left: 50%;
     transform: translate(-50%,-50%);
 }
 
@@ -106,10 +107,11 @@ a {
   list-style: none;
   padding: 0;
   position: absolute;
-  left: 50vw;
+  left: 50%;
   text-align: center;
   top: 20vh;
   transform: translate(-50%,0); 
+  width: fit-content;
 }
 
 .header-nav > li {  
@@ -141,12 +143,16 @@ a {
 /* MAIN BOX */
 
 .main-box{
-    float: left;
-    margin: 2vh auto 0;
+    margin: 2vh auto 2vh;
     max-width: 960px;
     text-align: justify;
     width: 100%;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1em;
+    line-height: 1.25em;
   }
+
 .main-box:after{
   visibility: hidden;
   display: block;
@@ -154,13 +160,66 @@ a {
   clear: both;
   height: 0;
 }
-.content-box{
+
+/* FOOTER  */
+.footer{
+  background-color: #eee;
+  border-color: rgb(0, 100, 70);
+  border-style: solid;
+  border-width: 1px 0 1px;
+  bottom: -100vh;
   box-sizing: border-box;
-  font-size: 1em;
-  line-height: 1.25em;
-  top: 35vh;
+  position: absolute;
+  height: 10em;
+  text-align: center;
+  width: 95vw;
+  z-index: 20; 
 }
 
+.footer-contact {
+  box-sizing: border-box;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  text-align: left;
+  right: 0;
+  bottom: 0;
+  /* transform: translate(-50%,0);  */
+}
+
+.footer-contact > li {
+  display: block;
+  font-size: 1em;
+  line-height: 1em;
+  padding: 0.2em 10px ;
+}
+
+.footer-logos {
+  box-sizing: border-box;
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  text-align: left;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.footer-logos > li {
+  margin: 5em 0 0 3em ;
+  display: inline-block;
+  transform: translate(0,-50%);
+}
+
+#logo-uva {
+  height: 4em;
+}
+
+#logo-CREED{
+  height: 4em;
+}
 /* LINKS */   
 
 .social-nav{
@@ -178,8 +237,8 @@ a {
 }
 
 .social-links{
-  width: 5vh;
-  height: 5vh;
+  width: 2em;
+  height: 2em;
 }
 
 /* IMAGES */
@@ -207,16 +266,19 @@ a {
 /* EDUCATION  */
 
 .educ-page {
+  display: block;
   position: absolute;
   top: 35vh;
   left: 50vw;
   transform: translate(-50%,0);
-  width: 51em;
+  width: 95vw;
+  max-width: 51em;
 }
 
 .educ-page > p {
   display: block;
   text-align: center;
+  margin-bottom: 1em;
 }
 
 .container{
@@ -291,6 +353,7 @@ a {
   text-transform: uppercase;
   top: 50%;
   transform: translate(-50%, -50%);
+  line-height: 1em;
 }
 
 .container:hover .overlay {
