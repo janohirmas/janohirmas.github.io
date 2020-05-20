@@ -241,7 +241,19 @@ a {
   height: 2em;
 }
 
-/* IMAGES */
+/* ABOUT */
+.about-text {
+  display: inline-block;
+  text-align: justify;
+  width: 35vw;
+  position: absolute;
+  top: 35vh;
+  right: 15vw;
+}
+
+.about-text > p {
+  margin-top: 1em;
+}
 
 #personal-pic {
   position: absolute;
@@ -249,19 +261,6 @@ a {
   left: 20vw;
   width: 25vw;
 }
-
-/* ABOUT */
-.about-text {
-  position: absolute;
-  text-align: justify;
-  right: 20vw;
-  width: 25vw;
-}
-
-.about-text > p {
-  margin-top: 1em;
-}
-
 
 /* EDUCATION  */
 
