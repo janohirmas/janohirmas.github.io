@@ -54,11 +54,22 @@ html{
 
 body{
     background-color: #eee;
-    color: #000;
+    color: rgb(0, 100, 70);
     font-size: 1em;
     font-family: Candara, Garamond, Helvetica, sans-serif;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 1em 0.5em 0.5em;
+}
+
+a {
+  font-size: 1em;
+  color: rgba(0, 100, 70,1);
+}
 /* HEADER SECTION */
 
 .header{
@@ -66,22 +77,20 @@ body{
   left: -30px; */
   background-color: #eee;
   border-width: 1px 0 1px;
-  border-color: rgb(0, 100, 0);
+  border-color: rgb(0, 100, 70);
   border-style: solid;
   box-sizing: border-box;
   display: block;
   height: 25vh;
-  width: 95vw;
-  position: relative;
+  width: 100%;
+  position: absolute;
   z-index: 20;
 }
 .header-logo {
     box-sizing: border-box;
-    color: rgba(0, 100, 0,1);
-    display: inline-block;
+    color: rgba(0, 100, 70,1);
     font-size: 3em;
-    height: 3em;
-    line-height: 3em;
+    line-height: 1em;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -109,7 +118,7 @@ body{
 }
 
 .header-nav a{
-  color: rgba(0, 100, 0,0.5);
+  color: rgba(0, 100, 70,0.5);
   display: inline-block;
   font-size: 1em;
   line-height: 1em;
@@ -117,7 +126,7 @@ body{
   height: 2vh;
   text-align: center;
   text-decoration: none;
-  border-left: rgba(0, 100, 0, 1) 1px solid ;
+  border-left: rgba(0, 100, 70, 1) 1px solid ;
 }
 
 .header-nav > li:first-child a {
@@ -125,7 +134,7 @@ body{
 }
 
 .header-nav a:hover{
-  color: rgba(0, 100, 0,1);
+  color: rgba(0, 100, 70,1);
   text-decoration: underline;
 }
 
@@ -182,6 +191,7 @@ body{
   width: 25vw;
 }
 
+/* ABOUT */
 .about-text {
   position: absolute;
   text-align: justify;
@@ -191,4 +201,129 @@ body{
 
 .about-text > p {
   margin-top: 1em;
+}
+
+
+/* EDUCATION  */
+
+.educ-page {
+  position: absolute;
+  top: 35vh;
+  left: 50vw;
+  transform: translate(-50%,0);
+  width: 51em;
+}
+
+.educ-page > p {
+  display: block;
+  text-align: center;
+}
+
+.container{
+  vertical-align:top;
+  display: inline-block;
+  margin: 5px 2px 0;
+  box-sizing: border-box;
+}
+
+.cv-educ {
+  height: 15em;
+  width: 35em;
+}
+
+.cv-code {
+  height: 15em;
+  width: 15em;
+}
+
+.cv-lang {
+  height: 17em;
+  width: 15em;
+}
+
+.cv-exp {
+  height: 17em;
+  width: 35em;
+}
+
+.cv-list{
+  list-style: none;
+  line-height: 1.5em;
+  margin: 1em;
+}
+
+.cv-table {
+  box-sizing: border-box;
+  margin: 1em;
+  position: absolute;
+  opacity: 0;
+  transition: .1s ease;
+}
+
+.cv-table .date {
+  width: 30%;
+}
+
+.cv-table .info {
+  width: 70%;
+}
+
+.cv-table .first {
+  width: 60%;
+}
+
+.overlay {
+  background-color: rgba(0, 100, 70, 1);
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  transition: .5s ease;
+}
+
+.overlay-text {
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  color: #eee;
+  font-size: 2.5em;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container:hover .overlay {
+  opacity: 0;
+}
+
+.container:hover .cv-table {
+  opacity: 1;
+}
+
+.cv-table tr {
+  height: 1.5em;
+}
+
+/* OTHERS */
+
+.tex sub, .latex sub, .latex sup {
+  text-transform: uppercase;
+}
+
+.tex sub, .latex sub {
+  vertical-align: -0.5ex;
+  margin-left: -0.1667em;
+  margin-right: -0.125em;
+}
+
+.tex, .latex, .tex sub, .latex sub {
+  font-size: 1em;
+}
+
+.latex sup {
+  font-size: 0.85em;
+  vertical-align: 0.15em;
+  margin-left: -0.36em;
+  margin-right: -0.15em;
 }
