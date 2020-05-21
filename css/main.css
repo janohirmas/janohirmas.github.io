@@ -57,7 +57,9 @@ body{
     color: rgb(0, 100, 70);
     font-size: 1em;
     font-family: Candara, Garamond, Helvetica, sans-serif;
-    min-height: 110vh;
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -81,11 +83,10 @@ a {
   border-color: rgb(0, 100, 70);
   border-style: solid;
   box-sizing: border-box;
-  display: block;
   height: 25vh;
   width: 95vw;
-  position: absolute;
-  z-index: 20;
+  z-index: 100;
+  display: block;
 }
 .header-logo {
     box-sizing: border-box;
@@ -96,9 +97,9 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     top: 10vh;
-    position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);
+    position: absolute;
 }
 
 .header-nav{
@@ -106,12 +107,12 @@ a {
   display: inline-block;
   list-style: none;
   padding: 0;
-  position: absolute;
   left: 50%;
   text-align: center;
   top: 20vh;
   transform: translate(-50%,0); 
   width: fit-content;
+  position: absolute;
 }
 
 .header-nav > li {  
@@ -143,23 +144,21 @@ a {
 /* MAIN BOX */
 
 .main-box{
-    margin: 2vh auto 2vh;
-    max-width: 960px;
     text-align: justify;
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
     font-size: 1em;
     line-height: 1.25em;
+    flex-grow: 1;
+    display: flex;
+    align-items:center;
   }
 
-.main-box:after{
+/* .main-box:after{
   visibility: hidden;
   display: block;
   font-size: 0;
   clear: both;
   height: 0;
-}
+} */
 
 /* FOOTER  */
 .footer{
@@ -167,29 +166,22 @@ a {
   border-color: rgb(0, 100, 70);
   border-style: solid;
   border-width: 1px 0 1px;
-  bottom: -100vh;
   box-sizing: border-box;
-  position: absolute;
-  height: 10em;
-  text-align: center;
-  width: 95vw;
-  z-index: 20; 
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }
 
 .footer-contact {
   box-sizing: border-box;
-  display: inline-block;
   list-style: none;
   padding: 0;
-  position: absolute;
   text-align: left;
-  right: 0;
-  bottom: 0;
-  /* transform: translate(-50%,0);  */
+  flex-basis: 20em;
+  flex-shrink: 0;
 }
 
 .footer-contact > li {
-  display: block;
   font-size: 1em;
   line-height: 1em;
   padding: 0.2em 10px ;
@@ -197,28 +189,22 @@ a {
 
 .footer-logos {
   box-sizing: border-box;
-  display: inline-block;
   list-style: none;
+  flex-basis: 75vw;
   padding: 0;
-  position: absolute;
-  text-align: left;
   left: 0;
   bottom: 0;
   height: 100%;
+  align-items: center;
+  text-align: center;
 }
 
 .footer-logos > li {
-  margin: 5em 0 0 3em ;
+  margin: 1em 2em ;
   display: inline-block;
-  transform: translate(0,-50%);
 }
-
-#logo-uva {
-  height: 4em;
-}
-
-#logo-CREED{
-  height: 4em;
+.footer-logos img {
+  width: 25vw;
 }
 /* LINKS */   
 
@@ -243,12 +229,18 @@ a {
 
 /* ABOUT */
 .about-text {
-  display: inline-block;
+  flex-basis: 35em;
+  flex-grow: 1;
   text-align: justify;
   width: 35vw;
-  position: absolute;
-  top: 35vh;
-  right: 15vw;
+  margin: 0 5vw 0 5vw;
+  box-sizing: border-box;
+}
+
+.about-image {
+  flex-basis: 25vw;
+  flex-grow: 1;
+  text-align: right;
 }
 
 .about-text > p {
@@ -256,7 +248,6 @@ a {
 }
 
 #personal-pic {
-  position: absolute;
   top: 35vh;
   left: 20vw;
   width: 25vw;
