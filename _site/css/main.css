@@ -252,7 +252,35 @@ a {
   left: 20vw;
   width: 25vw;
 }
+/* PUBLICATIONS */
+ .publications-page {
+   flex-grow: 1;
+   line-height: 1.2em;
+ }
 
+ .publications-page h1 {
+    font-size: 2.5em;
+    margin: 2em auto 1em  ;
+    text-align: left;
+ }
+
+ .publications-page h2 {
+  font-size: 1.5em;
+  margin: auto auto 0.3em  ;
+  text-align: left;
+}
+
+.publications-page h3 {
+  font-size: 1em;
+  font-style: italic;
+  margin: auto auto 0.7em  ;
+  text-align: left;
+}
+
+.publications-page p {
+  font-size: 1em;
+  text-align: justify;
+}
 /* EDUCATION  */
 
 .educ-page {
