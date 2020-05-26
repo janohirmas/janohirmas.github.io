@@ -1,39 +1,103 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+strong, b {
+  font-weight: bold;
+}
+em, i {
+  font-style: italic;
+}
+a img {
+  border: none;
+}
+/* END RESET*/
+
 :root {
     --sq-height: 5vw;
     --sq-width: 5vw;
     --table-heigth: 20vw;
     --table-width: 20vw;
-    --action-font-size: 1.5em;
+    --action-font-size: 1.2em;
     --table-side-margin: 25vw;
     --table-top-margin: 45vh;
     --outcome-background-color: #bbb;
     --outcome-text-color: #000;
+    --outcome-font-size:1em;
 }
+
+  body{
+      background-color: #eee;
+      color: var(--outcome-text-color);
+      font-size: 1em;
+      font-family: Candara, Garamond, Helvetica, sans-serif;
+      min-height: 120vh;
+      display: flex;
+      flex-direction: column;
+  }
+  
+.main-box{
+    flex-direction: column;
+}  
 
 .game-body {
     box-sizing: border-box;
     padding: 0 0;
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    flex-grow: 1;
+}
+.outcomes-body{
+    flex-direction: column;
+    flex-grow: 1;
 }
 
+
 .gametable-sep {
-    position: absolute;
-    top: var(--table-top-margin);
+    flex: auto;
     border-collapse: collapse;
     border-spacing: 0;
     box-sizing: border-box;
     height: var(--table-height);
-    overflow: hidden;
     width: var(--table-width);
-    margin: 0;
+    margin: 5vh 3em ;
 }
 
-.table-left {
-    left: var(--table-side-margin);
-}
 
-.table-right {
-    right: var(--table-side-margin);
-}
 .gametable-sep th, .gametable-sep td {
     height: var(--sq-height);
     width: var(--sq-width);
@@ -59,6 +123,7 @@
     background-color: var(--outcome-background-color);
     border-width: 0.5px;
     color: var(--outcome-background-color);
+    font-size: var(--outcome-font-size);
 }
 
 .hidden {
@@ -68,4 +133,4 @@
 .non-hidden {
     color: var(--outcome-text-color);
 }
-}
+

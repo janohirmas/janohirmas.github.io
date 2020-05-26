@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-    
-        <title> Attention Game || Alejandro Hirmas </title>
-    
+<head>
+    {% if page.title %}
+        <title> {{ page.title }} || Alejandro Hirmas </title>
+    {% else %}
+        <title> Alejandro Hirmas </title>
+    {% endif %}
 
-    
+    {% if page.description %}
+        <meta name="description" content="{{ page.content }}">
+    {% else %}
         <meta name="description" content="This is the personal website from Alejandro Hirmas, PhD Candidate.">
-    
+    {% endif %}
     <meta charset="utf-8">
     <link href="/images/Logos/favicon.png" rel="icon">
     <link rel="stylesheet" href="/css/main.css">
@@ -16,20 +18,3 @@
     <script type="text/javascript" src="/js/bundle.js"></script>
     <script src="https://kit.fontawesome.com/fb222f9122.js" crossorigin="anonymous"></script>
 </head>
-    <body>
-
-        <div class="main-box">
-            <div class="game-body">
-
-</div>
-<div class="outcomes-body">
-    <h2>Buttons Pressed</h2>
-    <p id='ButtonsPressed'></p>
-    <h2>Timings</h2>
-    <p id='TimePressed'></p>
-</div>
-
-        </div>
-
-    </body>
-</html>
