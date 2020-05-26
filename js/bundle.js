@@ -1,5 +1,8 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 // On page loading
+let PreviousTime = new Date().getTime();
+let PrintGameTable = require('janohirmas-printgametable');
+
 document.addEventListener("DOMContentLoaded", function() {
   let vOutcomesLeft = [3,2,0,0,3,0,0,2,1];
   let vOutcomesRight = [1,4,1,2,0,3,0,1,4];
@@ -7,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
   CreateTable(vOutcomesRight,TableId='R',TableClass='gametable-sep table-right');
 })
 
-let PrintGameTable = require('janohirmas-printgametable');
+
 
 // Print button in a object (cell)
 function CellButton(Cell, ButtonClass='', ButtonValue='',ButtonID='',DisplayClass='') {
@@ -26,13 +29,15 @@ function CellButton(Cell, ButtonClass='', ButtonValue='',ButtonID='',DisplayClas
     } else {
       p.innerHTML = ButtonValue;
     }
-    let now = new Date();
+    let now = new Date().getTime();
     p = document.getElementById('TimePressed');
+    let diff = (now-PreviousTime);
     if (p.innerHTML) {
-      p.innerHTML = p.innerHTML+','+now.getTime();
+      p.innerHTML = p.innerHTML+','+ diff;
     } else {
-      p.innerHTML = now.getTime();
+      p.innerHTML = diff;
     }
+    PreviousTime = now;
   });
   Cell.appendChild(btn);
 }
