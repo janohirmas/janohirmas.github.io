@@ -134,3 +134,8 @@ a img {
     color: var(--outcome-text-color);
 }
 
+#TimePressed #ButtonsPressed {
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  max-width: 0.5vw;
+}

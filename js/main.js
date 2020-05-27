@@ -1,42 +1,73 @@
 // On page loading
+const PrintGameTable = require('janohirmas-printgametable');
+const Fs = require('fs');
+const CsvReadableStream = require('csv-reader');
+const sGamesDir = '/sections/games/Games.csv';
+const Path = require('path');
+let PreviousPress = 'Start';
 let PreviousTime = new Date().getTime();
-let PrintGameTable = require('janohirmas-printgametable');
 
 document.addEventListener("DOMContentLoaded", function() {
   let vOutcomesLeft = [3,2,0,0,3,0,0,2,1];
   let vOutcomesRight = [1,4,1,2,0,3,0,1,4];
+  // let Games = ReadGames(sGamesDir);
   CreateTable(vOutcomesLeft,TableId='L',TableClass='gametable-sep table-left');
   CreateTable(vOutcomesRight,TableId='R',TableClass='gametable-sep table-right');
 })
 
-
+function ReadGames(dir) {
+  let Games = [];
+  jsonPath = Path.resolve(dir);
+  console.log(dir);
+  let inputStream = Fs.createReadStream(dir, 'utf8').pipe(new CsvReadableStream({ parseNumbers: true, parseBooleans: true, trim: true })).on('data', function (row) {
+      Games[row[0]] = row.slice(1,row.length);
+  }).on('end', function (data) {
+      console.log('No more rows!');
+  });
+  return Games;
+}
 
 // Print button in a object (cell)
-function CellButton(Cell, ButtonClass='', ButtonValue='',ButtonID='',DisplayClass='') {
+function CellButton(Cell, ButtonClass='',ButtonID='',ButtonValue='',DisplayClass='') {
+  // Create Button and apply characteristics
   let btn = document.createElement('button');
   btn.type = "button";
   btn.className = ButtonClass;
+  btn.id = ButtonID;
   btn.value = ButtonValue;
-  if (ButtonID) {btn.id = ButtonID};
-  btn.innerHTML = ButtonID;
+  btn.innerHTML = ButtonValue;
+  
+  // EventListener functions
   btn.addEventListener("click", function() {
-    HideEverything();
-    DisplayContent(DisplayClass,ButtonValue);
-    let p = document.getElementById('ButtonsPressed');
-    if (p.innerHTML) {
-      p.innerHTML = p.innerHTML+','+ButtonValue;
-    } else {
-      p.innerHTML = ButtonValue;
+    // Check that new element is pressed
+    if (btn.id != PreviousPress) {
+      
+      // display specific content
+      HideEverything();
+      DisplayContent(DisplayClass,ButtonValue);
+
+      // record button pressed
+      let p = document.getElementById('ButtonsPressed');
+      if (p.innerHTML) {
+        p.innerHTML = p.innerHTML+','+ButtonID;
+      } else {
+        p.innerHTML = ButtonID;
+      }
+
+      // record time of pressing
+      let now = new Date().getTime();
+      p = document.getElementById('TimePressed');
+      let diff = (now-PreviousTime);
+      if (p.innerHTML) {
+        p.innerHTML = p.innerHTML+','+ diff;
+      } else {
+        p.innerHTML = diff;
+      }
+
+      // change previous to new
+      PreviousPress = btn.id;
+      PreviousTime = now;
     }
-    let now = new Date().getTime();
-    p = document.getElementById('TimePressed');
-    let diff = (now-PreviousTime);
-    if (p.innerHTML) {
-      p.innerHTML = p.innerHTML+','+ diff;
-    } else {
-      p.innerHTML = diff;
-    }
-    PreviousTime = now;
   });
   Cell.appendChild(btn);
 }
@@ -83,24 +114,27 @@ function CreateTable(vOutcomes,TableId='',TableClass='') {
   }
   let row = table.insertRow(0);
   let cell = row.insertCell(0);
+
   // Fill header
   for (j=0; j<iC; j++) {
     cell = row.insertCell(j+1);
     CellButton(cell,'button-game button-action',TableId+vColNames[j],vColNames[j],'col-'+j+' tab-'+TableId)
     // cell.innerHTML = vColNames[j];
   }
+
   // Fill Rows
   for (i=0;i<iR;i++) {
     row = table.insertRow(i+1);
     cell = row.insertCell(0);
     outcomes = vValues.slice(3*i,3*(i+1));
+    console.log(outcomes)
     // Add Row Name
     CellButton(cell,'button-game button-action',TableId+vRowNames[i],vRowNames[i],'row-'+i+' tab-'+TableId)
-    // cell.innerHTML = vRowNames[i];
+
     // go through col values
     for (j=0; j<iC; j++) {
       cell = row.insertCell(j+1);
-      // cell.innerHTML = outcomes[j];
+      console.log(outcomes[j]);
       CellButton(cell,'button-game button-outcome row-'+i+' col-'+j+' tab-'+TableId,vRowNames[i]+vColNames[j],outcomes[j],'col-'+j+' row-'+i)
     }
   }
