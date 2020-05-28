@@ -47,17 +47,27 @@ a img {
 /* END RESET*/
 
 /* MAIN SECTION */
+
+:root {
+  --background-color: rgba(250,250,250,0.8);
+  --text-color: rgb(0, 100, 70);
+  --border-color: rgba(0, 100, 70,0.8);
+  --font-family: Candara, Garamond, Helvetica, sans-serif;
+  --basis-font-size: 1em;
+  --min-height: 120vh;
+}
+
 html{
   padding: 30px 2.5vw;
 
 }
 
 body{
-    background-color: #eee;
-    color: rgb(0, 100, 70);
-    font-size: 1em;
-    font-family: Candara, Garamond, Helvetica, sans-serif;
-    min-height: 120vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--basis-font-size);
+    font-family: var(--font-family);
+    min-height: var(--min-height);
     display: flex;
     flex-direction: column;
 }
@@ -71,48 +81,48 @@ h1 {
 
 a {
   font-size: 1em;
-  color: rgba(0, 100, 70,1);
+  color: var(--text-color);
 }
 /* HEADER SECTION */
 
 .header{
   /* top: -30px;
   left: -30px; */
-  background-color: #eee;
-  border-width: 1px 0 1px;
-  border-color: rgb(0, 100, 70);
+  background-color: var(--background-color);
+  border-color: var(--text-color);
   border-style: solid;
+  border-width: 1px 0 1px;
   box-sizing: border-box;
-  height: 25vh;
-  width: 95vw;
+  display: flexbox;
+  flex-direction: row;
+  position: fixed;
+  width: 93vw;
   z-index: 100;
-  display: block;
 }
 .header-logo {
     box-sizing: border-box;
-    color: rgba(0, 100, 70,1);
-    font-size: 3em;
+    color: var(--text-color);
+    font-size: 2em;
     line-height: 1em;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-    top: 10vh;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    position: absolute;
+    /* text-transform: uppercase; */
+    /* top: 8vh;
+    left: 5%;
+    transform: translate(0,-50%);
+    position: fixed; */
 }
-
 .header-nav{
   box-sizing: border-box;
-  display: inline-block;
   list-style: none;
   padding: 0;
-  left: 50%;
-  text-align: center;
-  top: 20vh;
-  transform: translate(-50%,0); 
+  text-align: left;
   width: fit-content;
-  position: absolute;
+  display: inline-block;
+  /* top: 15vh;
+  transform: translate(0,-50%); 
+  position: fixed;
+  left: 5%; */
 }
 
 .header-nav > li {  
@@ -121,7 +131,7 @@ a {
 }
 
 .header-nav a{
-  color: rgba(0, 100, 70,0.5);
+  color: var(--text-color);
   display: inline-block;
   font-size: 1em;
   line-height: 1em;
@@ -129,7 +139,7 @@ a {
   height: 2vh;
   text-align: center;
   text-decoration: none;
-  border-left: rgba(0, 100, 70, 1) 1px solid ;
+  border-left: var(--border-color) 1px solid ;
 }
 
 .header-nav > li:first-child a {
@@ -137,7 +147,7 @@ a {
 }
 
 .header-nav a:hover{
-  color: rgba(0, 100, 70,1);
+  color: var(--text-color);
   text-decoration: underline;
 }
 
@@ -151,6 +161,7 @@ a {
     display: flex;
     align-items:center;
     flex-direction: column;
+    margin-top: 20vh;
   }
 
 /* .main-box:after{
@@ -163,8 +174,8 @@ a {
 
 /* FOOTER  */
 .footer{
-  background-color: #eee;
-  border-color: rgb(0, 100, 70);
+  background-color: var(--background-color);
+  border-color: var(--border-color);
   border-style: solid;
   border-width: 1px 0 1px;
   box-sizing: border-box;
@@ -288,6 +299,7 @@ a {
 .publications-page p {
   font-size: 1em;
   text-align: justify;
+  margin: 1em 0 1em;
 }
 /* EDUCATION  */
 
@@ -387,6 +399,21 @@ a {
   height: 1.5em;
 }
 
+/* CONTACT PAGE */
+
+.contact-tab {
+  border-color: var(--text-color);
+  border-style: solid;
+  border-width: 1px 0 1px;
+  flex-basis: 20em;
+  flex-grow: 1;
+  margin-bottom: 1em;
+}
+
+.contact-tab tr{
+  box-sizing: border-box;
+  height: 1.5em;
+}
 /* OTHERS */
 
 .tex sub, .latex sub, .latex sup {
