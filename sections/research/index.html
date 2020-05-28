@@ -25,4 +25,14 @@ title: Research
             <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
         </div>
     {% endfor %}
+
+    <h1> Current Projects </h1>
+
+    {% for pub in site.categories.projects %}
+        <div class="publication">
+            <h2> {{ pub.title }} </h1>
+            <h3> {{ pub.authors }} </h2>
+            <p> {{ pub.content }} </p>
+        </div>
+    {% endfor %}
 </div>
