@@ -231,7 +231,7 @@ a {
   display: inline-block;
 }
 .footer-logos img {
-  height: 15vh;
+  height: 7.5em;
   background-color: var(--light-color);
   padding: 1em;
   box-sizing: border-box;
