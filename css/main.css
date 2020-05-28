@@ -359,28 +359,29 @@ a {
 /* EDUCATION  */
 
 .educ-page {
+  text-align: left;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 51em;
-  margin: 2vh 0;
+  max-width: 55em;
+  margin: 5vh 0;
 }
 
 .container{
   flex-grow: 1;
   vertical-align:top;
   display: inline-block;
-  margin: 5px 2px 0;
   box-sizing: border-box;
   flex-grow: 1;
+  margin: 0.5em;
 }
 
 .cv-educ {
-  height: 15em;
+  height: 17em;
   width: 35em;
 }
 
 .cv-code {
-  height: 15em;
+  height: 17em;
   width: 15em;
 }
 
@@ -397,15 +398,14 @@ a {
 .cv-list{
   list-style: none;
   line-height: 1.5em;
-  margin: 1em;
 }
 
 .cv-table {
   box-sizing: border-box;
-  margin: 1em;
   position: absolute;
   opacity: 0;
   transition: .5s ease;
+  margin: 1em;
 }
 
 .cv-table .date {
