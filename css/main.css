@@ -49,16 +49,17 @@ a img {
 /* MAIN SECTION */
 
 :root {
-  --color1: rgb(44, 53, 49);
-  --color1-faded: rgba(44, 53, 49,0.7);
-  --color2: #116466;
-  --color3: #D9B08C;
-  --color4: #FFCB9A;
-  --color5: #D1E8E2;
-  --background-color: var(--color1);
+  --color1: #687864;
+  --color1-faded: rgba(143, 193, 227,0.8);
+  --color2: rgb(49, 112, 142);
+  --color3: #5085a5;  
+  --color4: rgb(143, 193, 227);
+  --color5: #f7f9fb;
+  --background-color: var(--color5);
   --background-color-header: var(--color1-faded);
-  --text-color: white;
-  --border-color: var(--color3);
+  --text-color: black;
+  --text-color2: white;
+  --border-color: var(--color1);
   --light-color: var(--color5);
   --font-family: Candara, Garamond, Helvetica, sans-serif;
   --basis-font-size: 1em;
@@ -86,7 +87,7 @@ body{
 h1 {
   text-align: center;
   font-size: 2.5em;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   margin: 1em 0.5em 0.5em;
 }
 
@@ -113,7 +114,7 @@ a {
 }
 .header-logo {
     box-sizing: border-box;
-    color: var(--text-color);
+    color: var(--text-color1);
     font-size: 2em;
     line-height: 1em;
     text-align: center;
@@ -151,6 +152,7 @@ a {
   height: 2vh;
   text-align: center;
   text-decoration: none;
+  color: var(--text-color1);
   border-left: var(--border-color) 1px solid ;
 }
 
@@ -159,7 +161,6 @@ a {
 }
 
 .header-nav a:hover{
-  color: var(--text-color);
   text-decoration: underline;
 }
 
@@ -177,13 +178,13 @@ a {
 
 .main-box{
     text-align: justify;
-    font-size: 1em;
-    line-height: 1.25em;
+    font-size: 1.2em;
+    line-height: 1.5em;
     flex-grow: 1;
     display: flex;
     align-items:center;
     flex-direction: column;
-    margin-top: 5vh;
+    margin: 5vh 0;
   }
 
 
@@ -197,6 +198,7 @@ a {
   align-items: center;
   display: flex;
   flex-direction: row;
+  padding: 1em 0;
 }
 
 .footer-contact {
@@ -230,13 +232,19 @@ a {
   margin: 0 ;
   display: inline-block;
 }
+.footer-logos a {
+  vertical-align: middle;
+  text-align: center;
+}
+
 .footer-logos img {
-  height: 7.5em;
-  background-color: var(--light-color);
+  height: 90px;
   padding: 1em;
   box-sizing: border-box;
-  border: 1px var(--color3) solid;
+  /* border: 1px var(--color3) solid; */
 }
+
+
 /* LINKS */   
 
 .social-nav{
@@ -266,29 +274,32 @@ a {
 }
 
 .about-text {
-  flex-basis: 35em;
+  flex-basis: 30em;
   flex-grow: 1;
   text-align: justify;
-  width: 35vw;
   margin: 0 5vw 0 5vw;
   box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .about-image {
-  flex-basis: 25vw;
+  flex-basis: 20em;
   flex-grow: 1;
-  text-align: right;
-}
+  text-align: right; 
+  display: inline-block;
+  
+} 
 
 .about-text > p {
   margin-top: 1em;
+  flex-grow: 1;
+  width: 25em;
 }
 
 #personal-pic {
-  top: 35vh;
-  left: 20vw;
-  width: 25vw;
-}
+  width: 20em;
+} 
 
 /* TEACHING */
 
@@ -296,6 +307,7 @@ a {
   border-bottom-style: solid;
   border-bottom-color: var(--border-color);
   border-bottom-width: 1px;
+  margin-bottom: 1em;
 }
 
 .teaching-tab th {
@@ -305,7 +317,17 @@ a {
 }
 
 .teaching-tab tr {
-  height: 1.75em;
+  height: 2em;
+}
+
+.teaching-tab .tab-line {
+  height: 0.5em;
+}
+
+.teaching-tab .tab-line td {
+  border-color: var(--border-color);
+  border-width: 0 0 1px ;
+  border-style: solid;
 }
 
  .teaching-tab .vshort {
@@ -431,7 +453,7 @@ a {
 .overlay-text {
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-  color: var(--text-color);
+  color: var(--text-color2);
   font-size: 2.5em;
   left: 50%;
   position: absolute;
