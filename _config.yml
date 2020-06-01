@@ -1,1 +1,1 @@
-exclude: [node_modules, .well-known]
+exclude: [node_modules]
