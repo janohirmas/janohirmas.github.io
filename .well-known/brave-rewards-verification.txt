@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ahirmas.com
+Token: e9ad11bea301a747e990ce7d2c857d45590b584ac2c40b176bc5160557fb194e

@@ -4,16 +4,6 @@ title: Research
 ---
 
 <div class="publications-page">
-    <h1> Published Work </h1>
-
-    {% for pub in site.categories.published %}
-        <div class="publication">
-            <h2> {{ pub.title }} ({{ pub.year }}) </h1>
-            <h3> {{ pub.authors }} </h2>
-            <p> {{ pub.content }} </p>
-            <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
-        </div>
-    {% endfor %}
 
     <h1> Working Papers </h1>
 
@@ -33,6 +23,17 @@ title: Research
             <h2> {{ pub.title }} </h1>
             <h3> {{ pub.authors }} </h2>
             <p> {{ pub.content }} </p>
+        </div>
+    {% endfor %}
+
+    <h1> Published Work </h1>
+
+    {% for pub in site.categories.published %}
+        <div class="publication">
+            <h2> {{ pub.title }} ({{ pub.year }}) </h1>
+            <h3> {{ pub.authors }} </h2>
+            <p> {{ pub.content }} </p>
+            <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
         </div>
     {% endfor %}
 </div>
