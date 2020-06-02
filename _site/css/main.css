@@ -149,7 +149,7 @@ a {
   font-size: 1em;
   line-height: 1em;
   padding: 1vh 5px 1vh;
-  height: 2vh;
+  height: 2em;
   text-align: center;
   text-decoration: none;
   color: var(--text-color1);
@@ -298,7 +298,7 @@ a {
 }
 
 #personal-pic {
-  width: 20em;
+  width: 15em;
 } 
 
 /* TEACHING */
