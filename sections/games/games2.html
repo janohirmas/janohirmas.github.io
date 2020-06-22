@@ -1,15 +1,22 @@
 ---
-layout: default
+layout: decision
 title: Attention Game
 ---
+
+
+<div class="popup" onclick="myFunction()">Click me to toggle the popup!
+    
+</div>
 
 <table class="gametable-sep table-left">
     <tr>
         <th> </th>
-        <th>
+        <th class="popup">
+            <span class="popuptext" id="myPopup-1">Press Action X to reveal this column</span>
             <button  onclick="DisplayContent('col-x self')" value="SX" class="button-game button-action">
                 X
             </button>
+            
         </th>
         <th>
             <button onclick="DisplayContent('col-y self')" value="SY" class="button-game button-action">
