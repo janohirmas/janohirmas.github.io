@@ -49,23 +49,23 @@ a img {
 /* MAIN SECTION */
 
 :root {
-  --color1: #687864;
-  --color1-faded: rgba(143, 193, 227,0.8);
+  --color1: rgb(29, 19, 12);
+  --color1-faded: rgba(107,72,44,0.8);
   --color2: rgb(49, 112, 142);
   --color3: #5085a5;  
   --color4: rgb(143, 193, 227);
-  --color5: #f7f9fb;
+  --color5: rgba(236, 226, 215, 0.918);
   --background-color: var(--color5);
   --background-color-header: var(--color1-faded);
-  --text-color: black;
-  --text-color2: white;
+  --text-color: var(--color1);
+  --text-color2: var(--color5);
   --border-color: var(--color1);
   --light-color: var(--color5);
   --font-family: Candara, Garamond, Helvetica, sans-serif;
   --basis-font-size: 1em;
   --min-height: 120vh;
   --header-width: 93vw;
-  --hero-image: url('/images/Krka_Croatia.jpg');
+  --hero-image: url('/images/Hero.jpg');
 }
 
 html{
@@ -116,7 +116,7 @@ a {
 
 .header-logo {
     box-sizing: border-box;
-    color: var(--text-color1);
+    color: var(--text-color2);
     font-size: 2em;
     line-height: 1em;
     text-align: center;
@@ -146,7 +146,7 @@ a {
 }
 
 .header-nav a{
-  color: var(--text-color);
+
   display: inline-block;
   font-size: 1em;
   line-height: 1em;
@@ -154,7 +154,7 @@ a {
   height: 2em;
   text-align: center;
   text-decoration: none;
-  color: var(--text-color1);
+  color: var(--text-color2);
   border-left: var(--border-color) 1px solid ;
 }
 
