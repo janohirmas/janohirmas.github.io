@@ -61,11 +61,12 @@ a img {
   --text-color2: var(--color5);
   --border-color: var(--color1);
   --light-color: var(--color5);
-  --font-family: Candara, Garamond, Helvetica, sans-serif;
+  --font-family: Georgia, sans-serif, Helvetica;
   --basis-font-size: 1em;
   --min-height: 120vh;
   --header-width: 93vw;
   --hero-image: url('/images/Hero.jpg');
+  --line-height: 1.5em;
 }
 
 html{
@@ -82,6 +83,7 @@ body{
     min-height: var(--min-height);
     display: flex;
     flex-direction: column;
+    line-height: var(--line-height) ;
 }
 
 h1 {
@@ -312,6 +314,10 @@ a {
   border-bottom-width: 1px;
   margin-bottom: 1em;
 }
+.teaching-uni {
+  font-size: 1em;
+  font-weight: bold ;
+}
 
 .teaching-tab th {
   border-color: var(--border-color);
@@ -334,17 +340,17 @@ a {
 }
 
  .teaching-tab .vshort {
-  width: 5em
+  width: 7em
 }
 
 
 .teaching-tab .short {
-  width: 10em;
+  width: 12em;
 } 
 
-/* .teaching-tab .long {
-  width: 18em;
-}  */
+.teaching-tab .long {
+  width: 24em;
+}  
 
 .teaching-tab td,
 .teaching-tab th {
@@ -354,7 +360,6 @@ a {
 /* PUBLICATIONS */
  .publications-page {
    flex-grow: 1;
-   line-height: 1.2em;
  }
 
  .publications-page h1 {
@@ -480,6 +485,11 @@ a {
 }
 
 /* CONTACT PAGE */
+
+.contact-page {
+  min-height: 0;
+  text-align: center;
+}
 
 .contact-tab {
   border-color: var(--border-color);
