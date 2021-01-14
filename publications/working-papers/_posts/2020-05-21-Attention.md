@@ -1,8 +1,8 @@
 ---
 title: "Attention and Loss Aversions: an eye-tracking study"
 authors: Alejandro Hirmas, Jan Engelmann & Joel van der Weele
-date: 2020-01-01
-year: 2020
+date: 2021-01-01
+year: 2021
 journal: 
 volume: 
 pages: 
