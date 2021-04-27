@@ -9,20 +9,35 @@ title: Research
 
     {% for pub in site.categories.working-papers %}
         <div class="publication">
-            <h2> {{ pub.title }} </h1>
-            <h3> {{ pub.authors }} </h2>
+            <h2> {{ pub.title }} </h2>
+            <h3> {{ pub.subtitle }} </h3>
+            <h4> {{ pub.authors }} </h4>
             <p> {{ pub.content }} </p>
+            {% if pub.keywords %}
+            <p> <b>Keywords:</b> {{ pub.keywords }} </p>
+            {% endif %}
+            {% if pub.JEL %}
+            <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
+            {% endif %}
             <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
         </div>
     {% endfor %}
 
+    
     <h1> Current Projects </h1>
 
     {% for pub in site.categories.projects %}
         <div class="publication">
-            <h2> {{ pub.title }} </h1>
-            <h3> {{ pub.authors }} </h2>
+            <h2> {{ pub.title }} </h2>
+            <h3> {{ pub.subtitle }} </h3>
+            <h4> {{ pub.authors }} </h4>
             <p> {{ pub.content }} </p>
+            {% if pub.keywords %}
+            <p> <b>Keywords:</b> {{ pub.keywords }} </p>
+            {% endif %}
+            {% if pub.JEL %}
+            <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
+            {% endif %}
         </div>
     {% endfor %}
 
@@ -30,9 +45,16 @@ title: Research
 
     {% for pub in site.categories.published %}
         <div class="publication">
-            <h2> {{ pub.title }} ({{ pub.year }}) </h1>
-            <h3> {{ pub.authors }} </h2>
+            <h2> {{ pub.title }} </h2>
+            <h3> {{ pub.subtitle }} </h3>
+            <h4> {{ pub.authors }} </h4>
             <p> {{ pub.content }} </p>
+            {% if pub.keywords %}
+            <p> <b>Keywords:</b> {{ pub.keywords }} </p>
+            {% endif %}
+            {% if pub.JEL %}
+            <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
+            {% endif %}
             <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
         </div>
     {% endfor %}

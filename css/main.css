@@ -368,13 +368,19 @@ a {
     text-align: left;
  }
 
- .publications-page h2 {
+.publications-page h2 {
+  font-size: 2em;
+  margin: 2em auto 0.5em  ;
+  line-height: 1em;
+  text-align: left;
+}
+ .publications-page h3 {
   font-size: 1.5em;
   margin: auto auto 0.3em  ;
   text-align: left;
 }
 
-.publications-page h3 {
+.publications-page h4 {
   font-size: 1em;
   font-style: italic;
   margin: auto auto 0.7em  ;

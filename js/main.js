@@ -81,6 +81,10 @@ function DisplayContent(Act,val='') {
   }
 }
 
+
+ 
+  
+
 // Hide all elements 
 function HideEverything() {
   let x = document.getElementsByClassName("button-outcome");

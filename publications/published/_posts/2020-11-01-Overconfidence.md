@@ -6,6 +6,7 @@ year: 2020
 journal: Thinking & Reasoning
 pages: 1-28
 publisher: Routledge
+keywords: Judgement and Decision Making, Overconfidence, Growth curve modelling, crossed-lagged analyses
 doi: https://doi.org/10.1080/13546783.2020.1837241
 ---
 
