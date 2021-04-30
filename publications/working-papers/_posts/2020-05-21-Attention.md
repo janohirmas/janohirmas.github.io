@@ -1,7 +1,7 @@
 ---
 title: "Top Down or Bottom Up?"
 subtitle: "Disentangling the Channels of Attention in Risky Choice"
-authors: Alejandro Hirmas, Jan Engelmann & Joel van der Weele
+authors: Jan Engelmann, Alejandro Hirmas & Joël van der Weele
 date: 2021-01-01
 year: 2021
 journal: 
