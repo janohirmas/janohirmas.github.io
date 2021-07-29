@@ -248,6 +248,47 @@ a {
   /* border: 1px var(--color3) solid; */
 }
 
+/* COOKIE BANNER */
+
+.cookie-container {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: #253953ea;
+  color: #f5f6fa;
+  padding: 32px;
+  transition: 400ms;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cookie-container.active {
+  bottom: 0;
+}
+
+.cookie-container a {
+  color: #f5f6fa;
+}
+
+.cookie-container p {
+  flex-grow: 1;
+  color: #f5f6fa;
+}
+
+.cookie-button {
+  background-color: #ea4118;
+  border: 0;
+  color: #f5f6fa;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  margin: 0 18px;
+  text-align: justify;
+}
+
+
 
 /* LINKS */   
 
