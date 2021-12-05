@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Laury's Adventure </title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+
+
+
+<div class="text-msg">
+    <div class="text-box active" id="init-text"> 
+        <p> Hello Laury...</p> 
+        <p> Where are you? </p>
+        <p> Laury: I am at <input type="text" id="pass-check"></p>
+        <button id="ans-btn" onclick="checkAnswer()"> Answer </button>
+    </div>
+    <div class="text-box inactive" id="clue-text">
+    </div>
+
+</div>
+
+<!-- bottom buttons -->
+<div id="distance" class="bottom-btn">  </div>
+
+<!-- <button id="left-btn" class="bottom-btn" onclick="">
+    &#8592
+</button>
+<button id="right-btn" class="bottom-btn" onclick="">
+    &#8594
+</button> -->
+
+<button id="location-btn" class="bottom-btn" onclick="adjustPosition()">
+    <img id="loc-img" src="figures/location-pin.png">
+</button>
+
+</body>
+
+</html>

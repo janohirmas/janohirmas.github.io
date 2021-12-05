@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Timer</title>
+</head>
+<body>
+    <script>
+        var sActive = 'none';
+        var iHours, iMinutes, iSeconds, TimerInterval;
+        var iTimer = 0;
+        var bPause = false;
+
+        function startTimer() {
+            iTimer = 0
+            TimerInterval = setInterval(adjustTimer,1000);
+        };
+
+        function pauseTimer() { bPause=true};
+
+        function stopTimer() { 
+            clearInterval(TimerInterval);
+            let activeTime = document.getElementById(`time-${sActive}`);
+            activeTime.innerHTML = +activeTime.innerHTML + iTimer; 
+
+        };
+
+        function adjustTimebar() {
+            lTimebars = document.getElementsByClassName('div-time');
+            let totalWidth = document.getElementById(`col-times`).clientWidth;
+            let dMaxTime = 200; 
+            console.log(totalWidth);
+            for (i=0;i<lTimebars.length; i++) {
+                // ! Adjust this!
+                lTimebars[i].style.width = +totalWidth*lTimebars[i].innerHTML/dMaxTime;
+            };
+        }
+
+        function adjustTimer() {
+            if (!bPause) {
+                iTimer             += 1;
+                let iResidual       = iTimer;
+                let divHr           = document.getElementById('hours');
+                let divMin          = document.getElementById('minutes');
+                let divSec          = document.getElementById('seconds');
+                iHours              = Math.floor(iResidual/3600);
+                iResidual          += -iHours*3600;
+                iMinutes            = Math.floor(iResidual/60);
+                iResidual          += -iMinutes*60;
+                iSeconds            = iResidual;
+                divHr.innerHTML     = iHours;
+                divMin.innerHTML    = iMinutes;
+                divSec.innerHTML    = iSeconds;
+            }
+        };
+
+        function addTask(sName) {
+            let colTasks        = document.getElementById('col-tasks');
+            let colTimes        = document.getElementById('col-times')
+            let divNew          = document.createElement("div");
+            divNew.classList    = 'div-time';
+            divNew.innerHTML    = 0;
+            divNew.id           = `time-${sName}`;
+            
+            let btnNew          = document.createElement("button");
+            btnNew.type         = 'button';
+            btnNew.classList    = 'btn-task';
+            btnNew.innerHTML    = sName;
+            btnNew.id           = sName;
+            btnNew.onclick      = () => { 
+                console.log(`${sName} activated`);
+                sActive = sName 
+            };
+            colTasks.appendChild(btnNew); 
+            colTimes.appendChild(divNew);
+
+        };
+
+        function addInputTask() {
+            let sName = document.getElementById('task-name').value;
+            addTask(sName)
+        }
+
+
+
+        // const rows = [
+        //     ["name1", "city1", "some other info"],
+        //     ["name2", "city2", "more info"]
+        // ];
+
+        // let csvContent = "data:text/csv;charset=utf-8," 
+        //     + rows.map(e => e.join(",")).join("\n");
+        
+        // var encodedUri = encodeURI(csvContent);
+        // var link = document.createElement("a");
+        // link.setAttribute("href", encodedUri);
+        // link.setAttribute("download", "my_data.csv");
+        // link.innerHTML = "download data"
+        // document.body.appendChild(link); // Required for FF 
+    </script>
+
+
+    <div class="global-container">
+        <div class="tasks-container">
+            <div class="column" id="col-tasks"> 
+
+            </div>
+
+            <div class="column" id="col-times">
+
+            </div>
+        </div>
+    
+        <div class="menu"> 
+            <div class="menu-opt" id="add-task">
+                <input type="text" name="task-name" id="task-name">
+                <button class="btn-menu" id="btn-add" onclick="addInputTask()"> Add Task </button>
+            </div>
+
+            <div class="menu-opt" id="timer">
+                <div id="time">
+                    <div class="time-unit" id="hours"> 00 </div>
+                    <div class="time-unit" id="minutes"> 00 </div>
+                    <div class="time-unit" id="seconds"> 00 </div>
+                </div>
+                <div id="timer-btns">
+                    <button class="btn-menu" id="btn-start" onclick="startTimer()"> Start </button>
+                    <button class="btn-menu" id="btn-start" onclick="pauseTimer()"> Pause </button>
+                    <button class="btn-menu" id="btn-start" onclick="stopTimer()"> Stop </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        
+        
+        .global-container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            background-color: lightslategray;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        
+        .tasks-container, .menu, .column {
+            display: flex;
+            height: 100%;
+        }
+
+        .menu {
+            flex-grow: 30;
+            background-color: lightblue;
+            flex-direction: column;
+        }
+
+        .menu-opt {
+            margin: 1em;
+        }
+        
+        .tasks-container {
+            flex-grow: 70;
+            background-color: lightgreen;
+            flex-direction: row;
+        }
+
+        .column {
+            flex-direction: column;
+
+        }
+
+        .btn-task {
+            display: flex;
+            flex-grow: 1;
+            align-items: center;
+            margin: 1em 0;
+        }
+
+        .btn-task:focus {
+            border: blue 2px solid;
+        }
+
+        .div-time {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            flex-grow: 1;
+            margin: 1em 0;
+            background-color: blueviolet;
+            color: white;
+            margin: 1em 0;
+        }
+        #time {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .time-unit {
+            width: 4em;
+            height: 4em;
+            border: solid black 1px;
+            text-align: center;
+            line-height: 2em;
+            font-size: 2em;
+            padding: 1em 0;
+        }
+    </style>
+
+
+
+</body>
+</html>
