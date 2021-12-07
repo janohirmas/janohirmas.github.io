@@ -3,12 +3,26 @@ var currentPosition={};
 var activeQuest = 'None';
 // Quests
 const Quest = [{
-    id: 'Home',
-    Location: {latitude: 52.3915747, longitude: 4.9342416},
-    Clue: "clue1.txt",
-    Question: 'Bird: What is the number of the house where I live?',
-    Answer: '190',
-}]
+        id: 'Home',
+        Location: {latitude: 52.3915747, longitude: 4.9342416},
+        Clue: "clue1.txt",
+        Question: 'Bird: What is the number of the house where I live?',
+        Answer: '190',
+    }, {
+        id: 'Bird',
+        // Location: {latitude: 52.384724, longitude: 4.930480},
+        Location: {latitude: 52.365520, longitude: 4.910808},
+        Clue: "clue2.txt",
+        Question: 'wut?',
+        Answer: 'Margreeth',
+    },{
+        id: 'Broers',
+        // Location: {latitude: 52.385614, longitude: 4.914406},
+        Location: {latitude: 52.363898, longitude: 4.910761},
+        Clue: "clue3.txt",
+        Question: 'wut?',
+        Answer: 'Katja',
+    }]
 // Functions
 function readTextFile(file)
 {
