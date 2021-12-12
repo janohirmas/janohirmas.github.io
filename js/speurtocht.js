@@ -2,27 +2,49 @@
 var currentPosition={};
 var activeQuest = 'None';
 // Quests
-const Quest = [{
-        id: 'Home',
+const Quest = [
+    {
+        id: 'home',
+        Location: {latitude: 52.397076, longitude: 4.931854},
+    }, 
+    {
+        id: 'yoga',
         Location: {latitude: 52.3915747, longitude: 4.9342416},
-        Clue: "clue1.txt",
-        Question: 'Bird: What is the number of the house where I live?',
+    },
+    {
+        id: 'bird',
+        Location: {latitude: 52.384724, longitude: 4.93048},
+    },
+    {
+        id: 'broers',
+        Location: {latitude: 52.385614, longitude: 4.914406},
         Answer: '190',
-    }, {
-        id: 'Bird',
-        // Location: {latitude: 52.384724, longitude: 4.930480},
-        Location: {latitude: 52.365520, longitude: 4.910808},
-        Clue: "clue2.txt",
-        Question: 'wut?',
-        Answer: 'Margreeth',
-    },{
-        id: 'Broers',
-        // Location: {latitude: 52.385614, longitude: 4.914406},
-        Location: {latitude: 52.363898, longitude: 4.910761},
-        Clue: "clue3.txt",
-        Question: 'wut?',
-        Answer: 'Katja',
-    }]
+    },
+    {
+        id: 'nachtegalen',
+        Location: {latitude: 52.383925, longitude: 4.901745},
+    },  
+    {
+        id: 'filmmuseum',
+        Location: {latitude: 52.3755256, longitude: 4.8949212},
+    },  
+    {
+        id: 'bartsmit',
+        Location: {latitude: 52.373983, longitude: 4.891038},
+    },  
+    {
+        id: 'alfajores',
+        Location: {latitude: 52.381337, longitude: 4.891279},
+    },  
+    {
+        id: 'fit4free',
+        Location: {latitude: 52.384407, longitude: 4.886072},
+    },  
+    {
+        id: 'dancing',
+        Location:{latitude: 52.354655, longitude: 4.855231},
+    },  
+]
 // Functions
 function readTextFile(file)
 {
@@ -43,39 +65,35 @@ function readTextFile(file)
     return allText;
 }
 
-function checkAnswer() {
-    getLocation();
-    // Looks if PasswordID is correct
+function whereAreYou() {
     let sAnswer = document.getElementById('pass-check').value;
+    sAnswer = sAnswer.replace(/\s+/g, '').toLowerCase();
+    console.log(sAnswer)
     let Result  = Quest.filter(d=>d['id']==sAnswer);
-    activeQuest = Result[0];
-    // If Correct Display Clue
     if (Result.length==1) {
-        // Hide Init Text
-        let initText = document.getElementById("init-text")
-        initText.classList.add("inactive");
-        initText.classList.remove("active");
-        // Show Clue
-        let clueText = document.getElementById("clue-text");
-        let sCluePath = `clues/${activeQuest.Clue}`;
-        clueText.innerHTML = readTextFile(sCluePath);
-        clueText.classList.remove("inactive");
-        clueText.classList.add("active");
-    } 
-    
+        url = `./stages/${Result[0].id}/index.html`
+        console.log(url)
+        window.location = url;
+    }
 }
+
+
 
 function adjustPosition() {
     if (activeQuest!='None') {
         getLocation();
+        document.getElementById('next-stop').classList.remove('inactive');
         let distanceText  = document.getElementById('distance');
         let dDistance = Math.round(geoDistance(currentPosition,activeQuest.Location));
         console.log(`Distance is ${dDistance}mts`)
-        if (dDistance>100) {
-            distanceText.innerHTML = '&gt;100mts';
-        } else {
+        if (dDistance>1000) {
+            let dKdist = Math.round(dDistance/100)/10;
+            distanceText.innerHTML = `${dKdist}kms`
+        } else if (dDistance>100) {
             distanceText.innerHTML = `${dDistance}mts`
-        }
+        } else if (dDistance<=100) {
+            distanceText.innerHTML = '&gt;100mts';
+        } 
     }
 }
 

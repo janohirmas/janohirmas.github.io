@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if page.title %}
+        <title> Laury's Adventure -- {{ page.title }} </title>
+    {% else %}
+        <title> Laury's Adventure </title>
+    {% endif %}
+    <script src="/js/speurtocht.js"></script>
+    <link rel="stylesheet" href="/css/speurtocht.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() { 
+            id = document.getElementById('id-quest').value;
+            activeQuest = Quest.filter(d=>d['id']==id)[0];
+        });
+    </script>
+</head>
+
+
+<body>
+
+<input type="hidden" id="id-quest" value="{{ page.id }}"> 
+
+
+<div class="text-msg">
+    <div class="text-box active" id="init-text"> 
+        {{ content }}
+    </div>
+    <div class="text-box inactive" id="clue-text">
+    </div>
+
+</div>
+
+<!-- bottom buttons -->
+<div id="distance" class="bottom-btn">  </div>
+
+<button id="location-btn" class="bottom-btn" onclick="adjustPosition()">
+    <img id="loc-img" src="/images/speurtocht/location-pin.png">
+</button>
+
+<button id="back-btn" class="bottom-btn" onclick="location.href='/sections/apps/Speurtocht';">
+    Back
+</button>
+
+</body>
+
+</html>
