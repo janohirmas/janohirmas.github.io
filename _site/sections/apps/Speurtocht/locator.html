@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <title> Laury's Adventure -- Contact </title>
-    
+    {% if page.title %}
+        <title> Laury's Adventure -- {{ page.title }} </title>
+    {% else %}
+        <title> Laury's Adventure </title>
+    {% endif %}
     <script src="/js/speurtocht.js"></script>
     <link rel="stylesheet" href="/css/speurtocht.css">
     <script>
@@ -19,14 +21,12 @@
 
 <body>
 
-<input type="hidden" id="id-quest" value="bartsmit"> 
+<input type="hidden" id="id-quest" value="{{ page.id }}"> 
 
 
 <div class="text-msg">
     <div class="text-box active" id="init-text"> 
-        Het is tijd nu voor iets zoet. Iets zo goed, dat de konigin hebben moet
-
-
+        <div id="location"> </div> <button onclick="copy2Clipboard('location')"> copy </button>
     </div>
     <div class="text-box inactive" id="clue-text">
     </div>
@@ -36,7 +36,7 @@
 <!-- bottom buttons -->
 <div id="distance" class="bottom-btn">  </div>
 
-<button id="location-btn" class="bottom-btn" onclick="adjustPosition()">
+<button id="location-btn" class="bottom-btn" onclick="writePosition()">
     <img id="loc-img" src="/images/speurtocht/location-pin.png">
 </button>
 

@@ -5,11 +5,15 @@ var activeQuest = 'None';
 const Quest = [
     {
         id: 'home',
+        Location: {latitude: 52.4007811, longitude: 4.934678},
+    }, 
+    {
+        id: 'golf',
         Location: {latitude: 52.397076, longitude: 4.931854},
     }, 
     {
         id: 'yoga',
-        Location: {latitude: 52.3915747, longitude: 4.9342416},
+        Location: {latitude: 52.391499, longitude: 4.934217},
     },
     {
         id: 'bird',
@@ -18,7 +22,6 @@ const Quest = [
     {
         id: 'broers',
         Location: {latitude: 52.385614, longitude: 4.914406},
-        Answer: '190',
     },
     {
         id: 'nachtegalen',
@@ -34,15 +37,11 @@ const Quest = [
     },  
     {
         id: 'alfajores',
-        Location: {latitude: 52.381337, longitude: 4.891279},
-    },  
-    {
-        id: 'fit4free',
-        Location: {latitude: 52.384407, longitude: 4.886072},
+        Location: {latitude: 52.384574, longitude: 4.886282},
     },  
     {
         id: 'dancing',
-        Location:{latitude: 52.354655, longitude: 4.855231},
+        Location: {latitude: 52.386214, longitude: 4.872481},
     },  
 ]
 // Functions
@@ -82,7 +81,6 @@ function whereAreYou() {
 function adjustPosition() {
     if (activeQuest!='None') {
         getLocation();
-        document.getElementById('next-stop').classList.remove('inactive');
         let distanceText  = document.getElementById('distance');
         let dDistance = Math.round(geoDistance(currentPosition,activeQuest.Location));
         console.log(`Distance is ${dDistance}mts`)
@@ -94,7 +92,22 @@ function adjustPosition() {
         } else if (dDistance<=100) {
             distanceText.innerHTML = '&gt;100mts';
         } 
+        // Display new info! 
+        document.getElementById('next-stop').classList.remove('inactive');
     }
+}
+
+function writePosition() {
+    getLocation();
+    let sText = `${currentPosition.latitude},${currentPosition.longitude}`;
+    document.getElementById('location').innerHTML = sText
+}
+
+function copy2Clipboard(id) {
+    /* Get the text field */
+    var copyText = document.getElementById(id);  
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.innerHTML);
 }
 
 function getLocation() {
