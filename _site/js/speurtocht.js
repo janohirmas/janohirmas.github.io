@@ -91,9 +91,9 @@ function adjustPosition() {
             distanceText.innerHTML = `${dDistance}mts`
         } else if (dDistance<=100) {
             distanceText.innerHTML = '&gt;100mts';
+            document.getElementById('next-stop').classList.remove('inactive');
         } 
         // Display new info! 
-        document.getElementById('next-stop').classList.remove('inactive');
     }
 }
 

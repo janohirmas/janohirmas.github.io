@@ -24,8 +24,19 @@
 
 <div class="text-msg">
     <div class="text-box active" id="init-text"> 
-        Het is tijd nu voor iets zoet. Iets zo goed, dat de konigin hebben moet
+        <p>De volgende clue zegt alles:
+</p>
+<p><em>
+    Het is tijd nu voor iets zoet. <br> 
+    Iets zo goed, dat de konigin hebben moet. 
 
+</em></p>
+
+<p id="next-stop" class="inactive">
+    <b> Lekker! </b> <br> Ga binnen en vraag voor jouw bestelling. 
+    <br> Geniet ervan!
+    <br> De code is:<b><em id="code">Alfajores</em></b> <button onclick="copy2Clipboard('code')"> kopieren </button>
+</p>
 
     </div>
     <div class="text-box inactive" id="clue-text">
@@ -41,7 +52,7 @@
 </button>
 
 <button id="back-btn" class="bottom-btn" onclick="location.href='/sections/apps/Speurtocht';">
-    Back
+    Terug
 </button>
 
 </body>
