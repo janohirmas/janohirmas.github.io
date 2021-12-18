@@ -1,5 +1,6 @@
 // Other variables or constants
 var currentPosition={};
+var iCounter = 0;
 var activeQuest = 'None';
 // Quests
 const Quest = [
@@ -81,6 +82,8 @@ function whereAreYou() {
 function adjustPosition() {
     if (activeQuest!='None') {
         getLocation();
+        iCounter++;
+        if (iCounter>=20) {document.getElementById('next-stop').classList.remove('inactive');}
         let distanceText  = document.getElementById('distance');
         let dDistance = Math.round(geoDistance(currentPosition,activeQuest.Location));
         console.log(`Distance is ${dDistance}mts`)
