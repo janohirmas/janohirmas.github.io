@@ -1,8 +1,0 @@
----
-title: "Exogenous Attention & Loss Aversion"
-authors: Alejandro Hirmas, Evgeny Vasilets & Jan Engelmann
-date: 2020-10-01
-year: 2020
----
-
-We study the effect of exogenous changes in visual attention on decisions of risk. Visual attention, namely, the process of filtering and selecting to focus on specific visual stimuli, plays a relevant role in the decision-making process Orquin and Mueller-Loose (2013). In a previous study Engelmann et al. (2021), we found a strong correlation between attention to different stimuli and their importance on the decision. Moreover, our results suggested that attention is both guided by the individuals’ preferences and has a causal effect on them. In this study we test the causal effect of attention on the decision process. By using a new manipulation of attention, we find evidence that attention has a causal role on the decision process. Our results also show that the attention and its effect on the decision is different depending on the valence of the outcomes (gains or losses). 
