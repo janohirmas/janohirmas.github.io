@@ -54,15 +54,11 @@ a img {
   --basis-font-size: 1em;
   --min-height: 120vh;
   --header-color: rgba(107,72,44,0.8);
+  --header-color-small: rgba(107,72,44,1);
   --header-height:    10vh;
-  --header-width: 97vw;
+  --header-width: 100vw;
   --hero-image: url('/images/Hero.jpg');
   --line-height: 1.5em;
-}
-
-html{
-  padding: 30px 2.5vw;
-
 }
 
 body{
@@ -74,6 +70,8 @@ body{
     display: flex;
     flex-direction: column;
     line-height: var(--line-height) ;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -108,7 +106,7 @@ a {
     display: flex;
     align-items:center;
     flex-direction: column;
-    margin: 5vh 0;
+    padding: 5vh 5vw;
   }
 
 
@@ -226,36 +224,17 @@ a {
 /* ABOUT */
 .about-page {
   flex-direction: row;
-  flex-grow: 1;
-  flex-basis: 1;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .about-text {
-  flex-basis: 30em;
-  flex-grow: 1;
-  text-align: justify;
-  margin: 0 5vw 0 5vw;
-  display: inline-block;
-  vertical-align: top;
+  padding: 0 2.5vw;
 }
 
-.about-image {
-  flex-basis: 20em;
-  flex-grow: 1;
-  text-align: right; 
-  display: inline-block;
-  
-} 
-
-
-.about-text > p {
-  margin-top: 1em;
-  flex-grow: 1;
-  width: 25em;
-}
-
-#personal-pic {
-  width: 15em;
+.about-img {
+  width: 35vw;
+  height: auto;  
 } 
 
 /* TEACHING */
@@ -667,16 +646,23 @@ a {
     margin-top: var(--header-height);
   }
 
+  /* ABOUT */
   .about-page {
     flex-direction: column;
-    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
   }
 
-  #personal-pic {
-    width: 75vw;
-    align-self: center;
-    justify-self: center;
+  .about-text {
+    padding: 1em 0;
+    width: 90vw;
   }
+
+  .about-img {
+    width: 90vw;
+    height: auto;  
+  } 
+
   
   .about-text {
     width: 100%;
@@ -685,17 +671,4 @@ a {
     flex-direction: column;
     vertical-align: top;
   }
-  
-  .about-text p {
-    width: 90%;
-  }
-
-  .about-image {
-    width: 80%;
-    height: auto;
-    flex-grow: 1;
-    display: flex;
-
-    
-  } 
 }
