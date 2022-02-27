@@ -643,7 +643,7 @@ a {
 .show {display: block;}
 
 /* RESPONSIVE DESIGN */
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px) {
   .footer {
       flex-direction:     column-reverse;
   }
@@ -666,4 +666,36 @@ a {
   .main-box {
     margin-top: var(--header-height);
   }
+
+  .about-page {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #personal-pic {
+    width: 75vw;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .about-text {
+    width: 100%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+  }
+  
+  .about-text p {
+    width: 90%;
+  }
+
+  .about-image {
+    width: 80%;
+    height: auto;
+    flex-grow: 1;
+    display: flex;
+
+    
+  } 
 }
