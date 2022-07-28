@@ -40,22 +40,29 @@ a img {
 /* MAIN SECTION */
 
 :root {
+    /* CSS HEX */
+  --indigo-dye: #2A4263ff;
+  --battleship-grey: #878788ff;
+  --unbleached-silk: #FEDECAff;
+  --coffee: #6C4E3Aff;
+  --oxford-blue: #112B4Cff;
   --color2: rgb(49, 112, 142);
   --color3: #5085a5;  
   --color4: rgb(143, 193, 227);
   --color5: rgba(236, 226, 215, 0.918);
-  --btn-color:        darkgreen;
-  --background-color: rgba(236, 226, 215, 0.918);
+  --btn-color: #112B4Cff;
+  --background-color: rgb(224, 224, 224);
   --text-color: rgb(29, 19, 12);
-  --text-color2: rgba(236, 226, 215, 0.918);
+  --text-color2: #878788ff;
   --border-color: rgb(29, 19, 12);
   --light-color: rgba(236, 226, 215, 0.918);
   --font-family: Georgia, sans-serif, Helvetica;
   --basis-font-size: 1em;
   --min-height: 120vh;
-  --header-color: rgba(107,72,44,0.8);
+  --header-color: rgba(17, 43, 76, 0.8);
   --header-color-small: rgba(107,72,44,1);
-  --header-height:    10vh;
+  --header-height:  10vh;
+  --header-height-phone:  15vh;
   --header-width: 100vw;
   --hero-image: url('/images/Hero.jpg');
   --line-height: 1.5em;
@@ -72,6 +79,7 @@ body{
     line-height: var(--line-height) ;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -90,7 +98,7 @@ a {
 
 .hero {
   /* border: 10px var(--color1) solid; */
-  height: 45vh;
+  height: 27vh;
   background-image: var(--hero-image);
   background-size: cover;
   background-position: center;
@@ -230,14 +238,22 @@ a {
   flex-direction: row;
   display: flex;
   justify-content: space-evenly;
+  justify-content: center;
 }
 
 .about-text {
+  display: flex;
+  flex-direction: column;
   padding: 0 2.5vw;
+  justify-content: center;
+}
+
+.about-text > p {
+  margin-bottom: 1em;
 }
 
 .about-img {
-  width: 35vw;
+  width: 25vw;
   height: fit-content;  
 } 
 
@@ -606,7 +622,7 @@ a {
     position:           absolute;
     background-color:   #f1f1f1;
     width:              var(--header-width);
-    top:                var(--header-height);
+    top:                var(--header-height-phone);
     left:               0;
     overflow:           auto;
     box-shadow:         0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -635,7 +651,9 @@ a {
       flex-basis: auto;
   }
   
-  
+  .header {
+    height: var(--header-height-phone);
+  }
   .social-nav { margin-top: 1em;}
   
   .header-nav a {
@@ -647,7 +665,7 @@ a {
   }
 
   .main-box {
-    margin-top: var(--header-height);
+    margin-top: var(--header-height-phone);
   }
 
   /* ABOUT */
