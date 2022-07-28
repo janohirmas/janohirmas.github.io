@@ -5,6 +5,23 @@ title: Research
 
 <div class="publications-page">
 
+    <h1> Job Market Paper </h1>
+
+    {% for pub in site.categories.jmp %}
+        <div class="publication">
+            <h2> {{ pub.title }} </h2>
+            <h3> {{ pub.subtitle }} </h3>
+            <h4> {{ pub.authors }} </h4>
+            <p> {{ pub.content }} </p>
+            {% if pub.keywords %}
+            <p> <b>Keywords:</b> {{ pub.keywords }} </p>
+            {% endif %}
+            {% if pub.JEL %}
+            <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
+            {% endif %}
+        </div>
+    {% endfor %}
+
     <h1> Working Papers </h1>
 
     {% for pub in site.categories.working-papers %}
@@ -41,7 +58,7 @@ title: Research
         </div>
     {% endfor %}
 
-    <h1> Published Work </h1>
+    <!-- <h1> Published Work </h1>
 
     {% for pub in site.categories.published %}
         <div class="publication">
@@ -57,5 +74,5 @@ title: Research
             {% endif %}
             <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
         </div>
-    {% endfor %}
+    {% endfor %} -->
 </div>
