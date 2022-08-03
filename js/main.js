@@ -9,14 +9,16 @@ document.addEventListener("DOMContentLoaded", function() {
     let cookieContainer = document.getElementsByClassName('cookie-container')[0];
     let AcceptButton = document.getElementById('cookies-all');
     let RejectButton = document.getElementById('cookies-essential');
-    
     // Display cookie banner if not selected already
     setTimeout( () => {
         if (!localStorage.getItem('cookieBannerDisplayed')) {
             cookieContainer.classList.add('active');
         }
     }, 2000);
-  
+    // Highlight active page
+
+    let sActive = document.getElementById("input-active").value;
+    document.getElementById(`nav-${sActive}`).classList.add('active');
     // Remove Scripts if cookies already rejected
     removeScripts();
     mobileVersion((window.innerWidth<680));

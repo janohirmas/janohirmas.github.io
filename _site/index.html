@@ -28,17 +28,18 @@
     <script src="https://kit.fontawesome.com/fb222f9122.js" crossorigin="anonymous"></script>
     <script src="/js/main.js" crossorigin="anonymous"></script>
 
+
 </head>
     <body>
         <header class="header">
     <a href="/" class="header-logo"> Alejandro Hirmas </a>
-    <nav >
-        <button onclick="dropdownHeader()" class="dropbtn" id="header-btn"> &#8801</button>
+    <nav>
+        <button onclick="dropdownHeader()" class="dropbtn hidden" id="header-btn"> &#8801</button>
         <ul class="header-nav" id="header-nav">
-            <li><a href="/">                    About Me    </a></li>
-            <li><a href="/sections/research/">  Research    </a></li>
-            <li><a href="/sections/cv/"> CV          </a></li>
-            <li><a href="/sections/contact/">   Contact     </a></li>
+            <li><a href="/" id="nav-main" class="header-link">                    About Me    </a></li>
+            <li><a href="/sections/research/" id="nav-research" class="header-link">  Research    </a></li>
+            <li><a href="/sections/cv/" id="nav-cv" class="header-link"> CV          </a></li>
+            <li><a href="/sections/contact/" id="nav-contact" class="header-link">   Contact     </a></li>
         </ul>
     </nav>
     
@@ -57,7 +58,7 @@
       My name is Alejandro Hirmas. 
     </p>
     <p>
-      I am a third-year PhD Candidate at Universiteit van Amsterdam. I am currently positioned at the 
+      I am a fourth-year PhD Candidate at Universiteit van Amsterdam. I am currently positioned at the 
       <em>Center for Research in Experimental Economics and Political Decision Making</em> (<a href="https://www.creedexperiment.nl/creed/">CREED</a>). 
       The PhD program is continuing my Research Master at <a href="https://www.tinbergen.nl/home">Tinbergen Institute</a>.
       I am studying the connection between (visual) attention and the decision process.
@@ -139,5 +140,8 @@
     <button type="button" class="cookie-button" id="cookies-essential" onclick="acceptCookies(false)"> Accept Essential Cookies </button> 
 </div>
  
+        <input type="hidden" value="main" id="input-active">
     </body>
+    
+
 </html>

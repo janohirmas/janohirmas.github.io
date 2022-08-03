@@ -315,36 +315,42 @@ a {
 }
 .publication {
   width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
 }
 .publications-page h1 {
   font-size: 2.5em;
-  margin: 2em auto 1em  ;
-  text-align: left;
+  margin: 2em auto 0 0  ;
+  text-align: center;
 }
+
 
 .publications-page h2 {
   font-size: 2em;
   margin: 2em auto 0.5em  ;
   line-height: 1em;
-  text-align: left;
+  text-align: center;
 }
 .publications-page h3 {
   font-size: 1.5em;
-  margin: auto auto 0.3em  ;
-  text-align: left;
+  margin: auto auto 0.5em  ;
+  text-align: center;
 }
 
 .publications-page h4 {
   font-size: 1em;
   font-style: italic;
   margin: auto auto 0.7em  ;
-  text-align: left;
+  text-align: center;
 }
 
 .publications-page p {
-  font-size: 1em;
+  font-size: 0.9em;
   text-align: justify;
-  margin: 1em 0 1em;
+  margin: 0.5em 0 0 0 ;
+  width: 70vw;
 }
 /* EDUCATION  */
 
@@ -502,6 +508,7 @@ a {
   z-index:            100;
 }
 
+
 .header-logo {
   color:              var(--text-color2);
   font-size:          2em;
@@ -532,6 +539,14 @@ a {
   border-left:        var(--border-color) 1px solid ;
 }
 
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+.header-nav .active {
+  font-weight: bold;
+  text-decoration: underline;
+}
 .header-nav li:last-child { padding-right: 20px; }
 
 /* FOOTER  */
