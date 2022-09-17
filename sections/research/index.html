@@ -13,6 +13,9 @@ navId: research
             <h2> {{ pub.title }} </h2>
             <h3> {{ pub.subtitle }} </h3>
             <h4> {{ pub.authors }} </h4>
+            {% if pub.JEL %}
+            <p class="status">  {{ pub.status }} </p>
+            {% endif %}
             <p> {{ pub.content }} </p>
             {% if pub.keywords %}
             <p> <b>Keywords:</b> {{ pub.keywords }} </p>
@@ -20,6 +23,7 @@ navId: research
             {% if pub.JEL %}
             <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
             {% endif %}
+            <p> <a href= '{{ pub.doi }}' > Go to latest presentation </a></p>
         </div>
     {% endfor %}
 
@@ -30,6 +34,9 @@ navId: research
             <h2> {{ pub.title }} </h2>
             <h3> {{ pub.subtitle }} </h3>
             <h4> {{ pub.authors }} </h4>
+            {% if pub.JEL %}
+            <p class="status">  {{ pub.status }} </p>
+            {% endif %}
             <p> {{ pub.content }} </p>
             {% if pub.keywords %}
             <p> <b>Keywords:</b> {{ pub.keywords }} </p>
@@ -49,6 +56,9 @@ navId: research
             <h2> {{ pub.title }} </h2>
             <h3> {{ pub.subtitle }} </h3>
             <h4> {{ pub.authors }} </h4>
+            {% if pub.JEL %}
+            <p class="status">  {{ pub.status }} </p>
+            {% endif %}
             <p> {{ pub.content }} </p>
             {% if pub.keywords %}
             <p> <b>Keywords:</b> {{ pub.keywords }} </p>
