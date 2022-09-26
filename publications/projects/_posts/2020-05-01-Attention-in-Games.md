@@ -4,5 +4,3 @@ authors: Alejandro Hirmas
 date: 2020-05-01
 year: 2020
 ---
-
-To be added

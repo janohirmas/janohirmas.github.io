@@ -23,7 +23,8 @@ navId: research
             {% if pub.JEL %}
             <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
             {% endif %}
-            <p> <a href= '{{ pub.doi }}' > Go to latest presentation </a></p>
+
+            <p> <a href= '{{ pub.latest }}' > Go to latest version </a> &nbsp; <a href= '{{ pub.presentation }}' > Go to latest presentation </a> </p>
         </div>
     {% endfor %}
 
