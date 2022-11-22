@@ -4,6 +4,8 @@ subtitle: Attention, gender biases and beliefs
 authors: Alejandro Hirmas & Jan Hausfeld
 date: 2022-05-01
 year: 2022
+shortname: hiring1
+
 ---
 Many of the hiring decisions are made by third parties. Head hunters or HR personnel select CVs of
 potential candidates for a job that will be evaluated by others. When looking for candidates, one tries

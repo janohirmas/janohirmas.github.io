@@ -3,6 +3,7 @@ title: "Gender stereotypes and payment schemes"
 authors: Yun Xiao, Alejandro Hirmas & Rafael Nunes Teixeira
 date: 2022-04-01
 year: 2022
+shortname: stereotypes1
 ---
 A signiffant gender gap in the labor market has been observed in almost ev-
 ery country (World Economic Forum, 2021). Existing studies have shown that

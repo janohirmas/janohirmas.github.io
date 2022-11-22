@@ -3,7 +3,6 @@ layout: default
 title: Research
 navId: research
 ---
-
 <div class="publications-page">
 
     <h1> Job Market Paper </h1>
@@ -16,15 +15,41 @@ navId: research
             {% if pub.JEL %}
             <p class="status">  {{ pub.status }} </p>
             {% endif %}
-            <p> {{ pub.content }} </p>
-            {% if pub.keywords %}
-            <p> <b>Keywords:</b> {{ pub.keywords }} </p>
-            {% endif %}
-            {% if pub.JEL %}
-            <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
-            {% endif %}
+            <p> 
+                {{ pub.content }} 
+                {% if pub.keywords %}
+                <br> <b>Keywords:</b> {{ pub.keywords }} 
+                {% endif %}
+                {% if pub.JEL %}
+                <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
+                {% endif %}
+            </p>
 
             <p> <a href= '{{ pub.latest }}' > Go to latest version </a> &nbsp; <a href= '{{ pub.presentation }}' > Go to latest presentation </a> </p>
+        </div>
+    {% endfor %}
+    <h1> Published Work </h1>
+
+    {% for pub in site.categories.published %}
+       
+        <div class="publication">
+            <h2> {{ pub.title }} </h2>
+            <h3> {{ pub.subtitle }} </h3>
+            <h4> {{ pub.authors }} </h4>
+            {% if pub.journal %}
+            <p class="status">  {{ pub.journal }}, {{ pub.year }} </p>
+            {% endif %}
+            <div class="abstract-reduced" id="{{ pub.shortname }}"> 
+                {{ pub.content }} 
+                {% if pub.keywords %}
+                <br> <b>Keywords:</b> {{ pub.keywords }} 
+                {% endif %}
+                {% if pub.JEL %}
+                <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
+                {% endif %}
+            </div>
+            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
+            <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
         </div>
     {% endfor %}
 
@@ -38,13 +63,16 @@ navId: research
             {% if pub.status %}
             <p class="status">  {{ pub.status }} </p>
             {% endif %}
-            <p> {{ pub.content }} </p>
-            {% if pub.keywords %}
-            <p> <b>Keywords:</b> {{ pub.keywords }} </p>
-            {% endif %}
-            {% if pub.JEL %}
-            <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
-            {% endif %}
+            <div class="abstract-reduced" id="{{ pub.shortname }}"> 
+                {{ pub.content }} 
+                {% if pub.keywords %}
+                <br> <b>Keywords:</b> {{ pub.keywords }} 
+                {% endif %}
+                {% if pub.JEL %}
+                <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
+                {% endif %}
+            </div>
+            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
             <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
         </div>
     {% endfor %}
@@ -60,31 +88,18 @@ navId: research
             {% if pub.JEL %}
             <p class="status">  {{ pub.status }} </p>
             {% endif %}
-            <p> {{ pub.content }} </p>
-            {% if pub.keywords %}
-            <p> <b>Keywords:</b> {{ pub.keywords }} </p>
-            {% endif %}
-            {% if pub.JEL %}
-            <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
-            {% endif %}
+            <div class="abstract-reduced" id="{{ pub.shortname }}"> 
+                {{ pub.content }} 
+                {% if pub.keywords %}
+                <br> <b>Keywords:</b> {{ pub.keywords }} 
+                {% endif %}
+                {% if pub.JEL %}
+                <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
+                {% endif %}
+            </div>
+            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
         </div>
     {% endfor %}
 
-    <!-- <h1> Published Work </h1>
 
-    {% for pub in site.categories.published %}
-        <div class="publication">
-            <h2> {{ pub.title }} </h2>
-            <h3> {{ pub.subtitle }} </h3>
-            <h4> {{ pub.authors }} </h4>
-            <p> {{ pub.content }} </p>
-            {% if pub.keywords %}
-            <p> <b>Keywords:</b> {{ pub.keywords }} </p>
-            {% endif %}
-            {% if pub.JEL %}
-            <p> <b>JEL Classifications:</b> {{ pub.JEL }} </p>
-            {% endif %}
-            <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
-        </div>
-    {% endfor %} -->
 </div>

@@ -92,3 +92,42 @@ function dropdownHeader() {
     document.getElementById("header-nav").classList.toggle("show");
 }
 
+// Reduce abstract 
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    const lAbs = document.getElementsByClassName("abstract-reduced")
+    if (lAbs.length>0) {
+        for (let i in lAbs) {
+            let abs = lAbs[i]
+            let id = abs.id;
+            // find 100th word and separate text
+            let innerHTML = abs.innerHTML.replace('<p>','').replace('</p>','').replace(/\s+/g, ' ').trim();
+            let words = innerHTML.split(' ');
+            innerHTML = innerHTML.split(words[100]);
+            // add new html with dots in between 
+            let newHTML = innerHTML[0] + words[100] + `<span id="dots-${id}"> ... </span> <span id="more-${id}">` + innerHTML.slice(1).join('') + '</span>';
+            abs.innerHTML = newHTML;
+            console.log(newHTML)
+            // hide more section
+            document.getElementById(`more-${id}`).style.display = 'none'
+        }
+
+    } else {
+        console.log('no-abstracts')
+    }
+})
+function displayAbstract(id) {
+    var dots = document.getElementById(`dots-${id}`);
+    var moreText = document.getElementById(`more-${id}`);
+    var btnText = document.getElementById(`btn-${id}`);
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more"; 
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less"; 
+      moreText.style.display = "inline";
+    }
+  }

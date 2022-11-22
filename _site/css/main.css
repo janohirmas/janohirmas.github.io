@@ -323,46 +323,58 @@ a {
   width: 70vw;
 }
 .publications-page h1 {
-  font-size: 2.5em;
+  font-size: 1.75em;
   line-height: 1em;
   margin: 2em auto 0 0  ;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
 
 .publications-page h2 {
-  font-size: 2em;
-  margin: 2em auto 0.5em  ;
+  font-size: 1.5em;
+  margin: 1em auto 0.1em  ;
   line-height: 1em;
-  text-align: center;
+  text-align: left;
+  width: 100%;
 }
 .publications-page h3 {
-  font-size: 1.5em;
-  margin: auto auto 0.5em  ;
-  text-align: center;
+  font-size: 1.25em;
+  margin: auto auto 0.1em  ;
+  width: 100%;
+  text-align: left;
 }
 
 .publications-page h4 {
-  font-size: 1em;
+  font-size: 0.9em;
   font-style: italic;
-  margin: auto auto 0.7em  ;
-  text-align: center;
+  margin: auto auto 0  ;
+  width: 100%;
+  text-align: left;
 }
 
 .publications-page .status {
   font-style: italic;
   font-size: 0.8em;
   width: 100%;
-  text-align: center;
+  text-align: left;
+  margin: auto auto 0  ;
 }
 
 .publications-page p {
   font-size: 0.9em;
   text-align: justify;
-  margin: 0.5em 0 0 0 ;
+  margin: 0.2em auto 0  ;
   width: 70vw;
 }
+
+.publications-page button {
+  background-color: var(--background-color);
+  margin-top: 1em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* EDUCATION  */
 
 .educ-page {
@@ -741,15 +753,20 @@ a {
   }
 
   .publications-page h1 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     width: 100%;
+    text-align: center;
   }
    
   .publications-page h2 {
-    font-size: 1.25em;
+    font-size: 1.15em;
+    text-align: center;
+
   }
   .publications-page h3 {
     font-size: 1.1em;
+    text-align: center;
+
   }
   
 }

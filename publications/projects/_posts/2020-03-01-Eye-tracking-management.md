@@ -4,6 +4,8 @@ authors: Juan Pablo Torres, Andres Musalem, Alejandro Hirmas
 date: 2022-05-01
 year: 2022
 Keywords: managerial decision-making, visual attention, heuristics.
+shortname: strategy1
+
 ---
 
 Behavioral strategy research aims to understand and improve strategic decision-
