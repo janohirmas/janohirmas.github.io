@@ -1,7 +1,7 @@
 ---
-title: "Top Down or Bottom Up?"
-subtitle: "Disentangling the Channels of Attention in Risky Choice"
-authors: Jan Engelmann, Alejandro Hirmas & Joël van der Weele
+title: Individual and Contextual Effects of Attention in Risky Choice
+# subtitle: "Disentangling the Channels of Attention in Risky Choice"
+authors: Alejandro Hirmas, Jan Engelmann & Joël van der Weele
 date: 2021-01-01
 year: 2021
 journal: Tinbergen Discussion Series

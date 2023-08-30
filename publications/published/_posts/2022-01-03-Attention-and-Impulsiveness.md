@@ -1,12 +1,12 @@
 ---
 title: "Impulsiveness moderates the effects of exogenous attention on the sensitivity to gains and losses in risky lotteries"
 authors: Alejandro Hirmas & Jan Engelmann
-date: 2022-01-01
-year: 2022
-doi: https://papers.tinbergen.nl/22046.pdf
+date: 2023-01-01
+year: 2023
+doi: https://www.sciencedirect.com/science/article/pii/S0167487023000016
 keywords: Attention, Impulsiveness, Loss Aversion, Random Utility Models.
 JEL: D81, D83, D87, D91 
-status: R&R in Journal of Economic Psychology
+journal: Journal of Economic Psychology
 shortname: impulsiveness1
 ---
 

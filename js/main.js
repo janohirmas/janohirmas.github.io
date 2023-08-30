@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             let abs = lAbs[i]
             let id = abs.id;
             // find 100th word and separate text
-            let innerHTML = abs.innerHTML.replace('<p>','').replace('</p>','').replace(/\s+/g, ' ').trim();
+            let innerHTML = abs.innerHTML.replace('<p>','').replace('<br>','').replace('</p>','').replace(/\s+/g, ' ').trim();
             let words = innerHTML.split(' ');
             innerHTML = innerHTML.split(words[100]);
             // add new html with dots in between 

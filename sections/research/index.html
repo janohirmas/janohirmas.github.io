@@ -15,7 +15,7 @@ navId: research
             {% if pub.JEL %}
             <p class="status">  {{ pub.status }} </p>
             {% endif %}
-            <p> 
+            <div class="abstract-reduced" id="{{ pub.shortname }}"> 
                 {{ pub.content }} 
                 {% if pub.keywords %}
                 <br> <b>Keywords:</b> {{ pub.keywords }} 
@@ -23,12 +23,14 @@ navId: research
                 {% if pub.JEL %}
                 <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
                 {% endif %}
-            </p>
+            </div>
+            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
+            <!-- <p> <a href= '{{ pub.doi }}' >Go to Article</a></p> -->
 
-            <p> <a href= '{{ pub.latest }}' > Go to latest version </a> &nbsp; <a href= '{{ pub.presentation }}' > Go to latest presentation </a> </p>
+            <!-- <p> <a href= '{{ pub.latest }}' > Go to latest version </a> &nbsp; <a href= '{{ pub.presentation }}' > Go to latest presentation </a> </p> -->
         </div>
     {% endfor %}
-    <h1> Published Work </h1>
+    <h1> Selected publications </h1>
 
     {% for pub in site.categories.published %}
        
