@@ -12,6 +12,10 @@
         <meta name="description" content="This is the personal website from Alejandro Hirmas, PhD Candidate.">
     {% endif %}
 
+    {% if page.canonical %}
+        <link rel="canonical" href="{{ page.canonical }}" />    
+    {% endif %}
+
     <!-- {% include google-analytics.html %} -->
     <meta charset="utf-8">
     <link href="/images/Logos/favicon.png" rel="icon">
