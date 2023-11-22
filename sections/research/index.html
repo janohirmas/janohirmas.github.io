@@ -18,12 +18,14 @@ canonical: https://ahirmas.com/sections/research/index.html
             {% endif %}
             <div class="abstract-reduced" id="{{ pub.shortname }}"> 
                 {{ pub.content }} 
-                {% if pub.keywords %}
-                <br> <b>Keywords:</b> {{ pub.keywords }} 
-                {% endif %}
-                {% if pub.JEL %}
-                <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
-                {% endif %}
+                <p class="keywords">
+                    {% if pub.keywords %}
+                    <br> <b>Keywords:</b> {{ pub.keywords }} 
+                    {% endif %}
+                    {% if pub.JEL %}
+                    <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
+                    {% endif %}
+                </p>
             </div>
             <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
             <!-- <p> <a href= '{{ pub.doi }}' >Go to Article</a></p> -->
@@ -44,12 +46,14 @@ canonical: https://ahirmas.com/sections/research/index.html
             {% endif %}
             <div class="abstract-reduced" id="{{ pub.shortname }}"> 
                 {{ pub.content }} 
-                {% if pub.keywords %}
-                <br> <b>Keywords:</b> {{ pub.keywords }} 
-                {% endif %}
-                {% if pub.JEL %}
-                <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
-                {% endif %}
+                <p class="keywords">
+                    {% if pub.keywords %}
+                    <br> <b>Keywords:</b> {{ pub.keywords }} 
+                    {% endif %}
+                    {% if pub.JEL %}
+                    <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
+                    {% endif %}
+                </p>
             </div>
             <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
             <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
@@ -68,12 +72,14 @@ canonical: https://ahirmas.com/sections/research/index.html
             {% endif %}
             <div class="abstract-reduced" id="{{ pub.shortname }}"> 
                 {{ pub.content }} 
-                {% if pub.keywords %}
-                <br> <b>Keywords:</b> {{ pub.keywords }} 
-                {% endif %}
-                {% if pub.JEL %}
-                <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
-                {% endif %}
+                <p class="keywords">
+                    {% if pub.keywords %}
+                    <br> <b>Keywords:</b> {{ pub.keywords }} 
+                    {% endif %}
+                    {% if pub.JEL %}
+                    <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
+                    {% endif %}
+                </p>
             </div>
             <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
             <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
@@ -92,13 +98,15 @@ canonical: https://ahirmas.com/sections/research/index.html
             <p class="status">  {{ pub.status }} </p>
             {% endif %}
             <div class="abstract-reduced" id="{{ pub.shortname }}"> 
-                {{ pub.content }} 
-                {% if pub.keywords %}
-                <br> <b>Keywords:</b> {{ pub.keywords }} 
-                {% endif %}
-                {% if pub.JEL %}
-                <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
-                {% endif %}
+                {{ pub.content }}
+                <p class="keywords">
+                    {% if pub.keywords %}
+                    <br> <b>Keywords:</b> {{ pub.keywords }} 
+                    {% endif %}
+                    {% if pub.JEL %}
+                    <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
+                    {% endif %}
+                </p>
             </div>
             <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
         </div>
