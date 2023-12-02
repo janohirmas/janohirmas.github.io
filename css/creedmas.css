@@ -1,0 +1,81 @@
+@font-face{ 
+    font-family: 'Santa';
+    src: url('/fonts/santa.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+body, .wrapper {
+    margin: 0;
+    padding: 0;
+
+}
+.wrapper {
+    position: absolute;
+    width: 100vw;
+    height: max-content;
+    min-height: 100vh;
+    background-color: rgb(191, 25, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center ;
+}
+.question,.answer,.clue {
+    width: 95vw;
+    padding: 2.5vh 2.5vw;
+    height: max-content;
+    background-color: darkgreen;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 2em;
+    line-height: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.question,.answer,.clue, input {
+    border-radius: 10px;
+    border: solid goldenrod 3.5pt;
+}
+.clueword {
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+input {
+    width: 40vw;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    line-height: 2em;
+    background-color: lightgray ;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    
+}
+
+.submit-btn { 
+    font-size: 1.5em;
+    font-family: 'Santa';
+    background-color: #400400;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.clue-img {
+    width: 50vw;
+    height: auto;
+}
+
+.clue-name {
+    font-style: italic;
+}
