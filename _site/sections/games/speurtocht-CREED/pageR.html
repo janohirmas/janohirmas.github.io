@@ -8,7 +8,11 @@
         <div class="wrapper">
             <div class="question">
                 <p>
-                    {{ content }}
+                    Person 1: All I want for christmas is you. <br>
+Person 2: I composed the Blue Danube <br>
+Person 3: I'm the queen of egypt. <br>
+
+Where did they go?  
                 </p>
             </div>
             <div class="answer" id="answer-box">
@@ -20,34 +24,34 @@
             <div class="clue hidden" id="clue-box">
                 
                 
-                {% if page.clue-boomer-name %}
+                
                 The Boomer's clue: 
-                    <img src="/images/creed-speurtocht/{{ page.clue-boomer }}" class="clue-img">
-                    <div class="clue-name"> "{{ page.clue-boomer-name }}" </div>
-                {% endif %}
+                    <img src="/images/creed-speurtocht/boomer-4.jpg" class="clue-img">
+                    <div class="clue-name"> "The Amsterdam cannals" </div>
+                
 
 
                 
-                {% if page.clue-millenial %}
+                
                 The Millenial's clue: 
-                    <img src="/images/creed-speurtocht/{{ page.clue-millenial }}" class="clue-img">
-                    <div class="clue-name"> "{{ page.clue-millenial-name }}" </div>
-                {% endif %}
+                    <img src="/images/creed-speurtocht/millenial-4.jpg" class="clue-img">
+                    <div class="clue-name"> "Fat bottomed girls - Queen" </div>
+                
 
 
                 
-                {% if page.clue-genz %}
+                
                 The Gen-Z' clue: 
-                <img src="/images/creed-speurtocht/{{ page.clue-genz }}" class="clue-img">
-                    <div class="clue-name"> "{{ page.clue-genz-name }}" </div>
-                {% endif %}
+                <img src="/images/creed-speurtocht/genz-4.jpg" class="clue-img">
+                    <div class="clue-name"> "New parents will be hearing this" </div>
+                
 
-                {{ page.QR-clue }}
+                Look for the latest QR code
                 <br>
-                Store this number: {{ page.key }}
+                Store this number: 24
             </div>
         </div>
-        <input type="hidden" id="answer" value="{{ page.answer }}">
+        <input type="hidden" id="answer" value="usa">
     </body>
     
 
