@@ -4,8 +4,7 @@ subtitle: "The role of information in sustainable decisions"
 authors: Alejandro Hirmas & Jan Engelmann
 date: 2022-01-01
 year: 2022
-# doi: "../../uploads/JMP.pdf"
-latest: "../../uploads/JMP.pdf"
+doi: "../../others/eco-label-draft"
 presentation: "../../uploads/presentation.pdf"
 keywords: Attention, Sustainability ratings, conjoint analysis, information treatments, MouselabWeb
 ---

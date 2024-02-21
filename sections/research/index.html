@@ -28,8 +28,9 @@ canonical: https://ahirmas.com/sections/research/index.html
                 </p>
             </div>
             <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
-            <!-- <p> <a href= '{{ pub.doi }}' >Go to Article</a></p> -->
-
+            {% if pub.doi %}
+                <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
+            {% endif %}
             <!-- <p> <a href= '{{ pub.latest }}' > Go to latest version </a> &nbsp; <a href= '{{ pub.presentation }}' > Go to latest presentation </a> </p> -->
         </div>
     {% endfor %}
