@@ -2,12 +2,12 @@
 title: Individual and Contextual Effects of Attention in Risky Choice
 # subtitle: "Disentangling the Channels of Attention in Risky Choice"
 authors: Alejandro Hirmas, Jan Engelmann & Joël van der Weele
-date: 2021-01-01
-year: 2021
-journal: Tinbergen Discussion Series
+date: 2024-01-01
+year: 2024
+journal: Experimental Economics
 volume: 
 pages: 
-status: R&R in Experimental Economics
+status: Accepted in Experimental Economics
 publisher:
 keywords: Attention, Random Parameter Models, Eye-tracking, Loss Aversion
 JEL: D81, D83, D87, D91
