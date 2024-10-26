@@ -1,6 +1,6 @@
 ---
 title: "Hiring for others"
-substitle: "The role of intermediaries in gender discrimination"
+subtitle: "The role of intermediaries in gender discrimination"
 authors: Alejandro Hirmas & Jan Hausfeld
 date: 2023-05-01
 year: 2023

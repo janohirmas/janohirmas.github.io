@@ -16,7 +16,7 @@ canonical: https://ahirmas.com/sections/research/index.html
             {% if pub.JEL %}
             <p class="status">  {{ pub.status }} </p>
             {% endif %}
-            <div class="abstract-reduced" id="{{ pub.shortname }}"> 
+            <div class="abstract" id="{{ pub.shortname }}"> 
                 {{ pub.content }} 
                 <p class="keywords">
                     {% if pub.keywords %}
@@ -27,7 +27,7 @@ canonical: https://ahirmas.com/sections/research/index.html
                     {% endif %}
                 </p>
             </div>
-            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
+            <!-- <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button> -->
             {% if pub.doi %}
                 <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
             {% endif %}
@@ -45,7 +45,7 @@ canonical: https://ahirmas.com/sections/research/index.html
             {% if pub.journal %}
             <p class="status">  {{ pub.journal }}, {{ pub.year }} </p>
             {% endif %}
-            <div class="abstract-reduced" id="{{ pub.shortname }}"> 
+            <!-- <div class="abstract-reduced" id="{{ pub.shortname }}"> 
                 {{ pub.content }} 
                 <p class="keywords">
                     {% if pub.keywords %}
@@ -56,7 +56,7 @@ canonical: https://ahirmas.com/sections/research/index.html
                     {% endif %}
                 </p>
             </div>
-            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
+            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button> -->
             <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
         </div>
     {% endfor %}
@@ -71,7 +71,7 @@ canonical: https://ahirmas.com/sections/research/index.html
             {% if pub.status %}
             <p class="status">  {{ pub.status }} </p>
             {% endif %}
-            <div class="abstract-reduced" id="{{ pub.shortname }}"> 
+            <!-- <div class="abstract-reduced" id="{{ pub.shortname }}"> 
                 {{ pub.content }} 
                 <p class="keywords">
                     {% if pub.keywords %}
@@ -82,8 +82,8 @@ canonical: https://ahirmas.com/sections/research/index.html
                     {% endif %}
                 </p>
             </div>
-            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
-            <p> <a href= '{{ pub.doi }}' >Go to Article</a></p>
+            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button> -->
+            <p> <a href= '{{ pub.doi }}' >Go to Preprint</a></p>
         </div>
     {% endfor %}
 
