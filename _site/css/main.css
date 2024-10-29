@@ -755,17 +755,17 @@ a {
   .publications-page h1 {
     font-size: 1.25em;
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
    
   .publications-page h2 {
     font-size: 1.15em;
-    text-align: center;
+    text-align: left;
 
   }
   .publications-page h3 {
     font-size: 1.1em;
-    text-align: center;
+    text-align: left;
 
   }
   
