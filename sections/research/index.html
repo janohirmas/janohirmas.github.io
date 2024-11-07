@@ -34,6 +34,32 @@ canonical: https://ahirmas.com/sections/research/index.html
             <!-- <p> <a href= '{{ pub.latest }}' > Go to latest version </a> &nbsp; <a href= '{{ pub.presentation }}' > Go to latest presentation </a> </p> -->
         </div>
     {% endfor %}
+    <h1> Working Papers </h1>
+
+    {% for pub in site.categories.working-papers %}
+        <div class="publication">
+            <h2> {{ pub.title }} </h2>
+            <h3> {{ pub.subtitle }} </h3>
+            <h4> {{ pub.authors }} </h4>
+            {% if pub.status %}
+            <p class="status">  {{ pub.status }} </p>
+            {% endif %}
+            <!-- <div class="abstract-reduced" id="{{ pub.shortname }}"> 
+                {{ pub.content }} 
+                <p class="keywords">
+                    {% if pub.keywords %}
+                    <br> <b>Keywords:</b> {{ pub.keywords }} 
+                    {% endif %}
+                    {% if pub.JEL %}
+                    <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
+                    {% endif %}
+                </p>
+            </div>
+            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button> -->
+            <p> <a href= '{{ pub.doi }}' >Go to Preprint</a></p>
+        </div>
+    {% endfor %}
+
     <h1> Selected publications </h1>
 
     {% for pub in site.categories.published %}
@@ -61,31 +87,7 @@ canonical: https://ahirmas.com/sections/research/index.html
         </div>
     {% endfor %}
 
-    <h1> Working Papers </h1>
 
-    {% for pub in site.categories.working-papers %}
-        <div class="publication">
-            <h2> {{ pub.title }} </h2>
-            <h3> {{ pub.subtitle }} </h3>
-            <h4> {{ pub.authors }} </h4>
-            {% if pub.status %}
-            <p class="status">  {{ pub.status }} </p>
-            {% endif %}
-            <!-- <div class="abstract-reduced" id="{{ pub.shortname }}"> 
-                {{ pub.content }} 
-                <p class="keywords">
-                    {% if pub.keywords %}
-                    <br> <b>Keywords:</b> {{ pub.keywords }} 
-                    {% endif %}
-                    {% if pub.JEL %}
-                    <br> <b>JEL Classifications:</b> {{ pub.JEL }} 
-                    {% endif %}
-                </p>
-            </div>
-            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button> -->
-            <p> <a href= '{{ pub.doi }}' >Go to Preprint</a></p>
-        </div>
-    {% endfor %}
 
     
     <h1> Current Projects </h1>
@@ -109,7 +111,7 @@ canonical: https://ahirmas.com/sections/research/index.html
                     {% endif %}
                 </p>
             </div>
-            <button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button>
+            <p><button onclick="displayAbstract('{{ pub.shortname }}')" id="btn-{{ pub.shortname }}">Read more</button></p>
         </div>
     {% endfor %}
 
