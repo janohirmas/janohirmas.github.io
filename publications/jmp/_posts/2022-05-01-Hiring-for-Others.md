@@ -6,7 +6,7 @@ date: 2024-11-01
 year: 2024
 shortname: hiring1
 keywords: Recruitment and Selection, Beliefs, Gender discrimination
-doi: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5013215"
+doi: "../../uploads/JMP.pdf"
 
 ---
 
