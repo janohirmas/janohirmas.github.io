@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV – Alejandro Hirmas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --sidebar-bg: #2b3a4e;
+    --sidebar-text: #e0e6ed;
+    --sidebar-heading: #ffffff;
+    --sidebar-accent: #6db3d4;
+    --main-bg: #ffffff;
+    --main-text: #2d2d2d;
+    --main-heading: #2b3a4e;
+    --accent: #4a90b8;
+    --muted: #6a6a6a;
+    --line: #c8d0d8;
+    --dot-filled: #e0e6ed;
+    --dot-empty: rgba(255,255,255,0.2);
+  }
+
+  html { font-size: 14px; }
+
+  body {
+    font-family: 'Source Sans Pro', 'Segoe UI', sans-serif;
+    background: #e8ecf0;
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px;
+    color: var(--main-text);
+    line-height: 1.45;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    background: var(--main-bg);
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    overflow: hidden;
+  }
+
+  /* ── SIDEBAR ─────────────────────────────── */
+  .sidebar {
+    background: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 32px 22px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .sidebar h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--sidebar-heading);
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+  }
+
+  .sidebar h1 span { display: block; }
+
+  .sidebar .contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.82rem;
+    word-break: break-all;
+  }
+
+  .sidebar .contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+  }
+
+  .sidebar .contact-list .icon {
+    flex-shrink: 0;
+    width: 14px;
+    text-align: center;
+    margin-top: 2px;
+    opacity: 0.7;
+  }
+
+  .sidebar .section-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--sidebar-heading);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 5px;
+    margin-bottom: 2px;
+  }
+
+  .sidebar a {
+    color: var(--sidebar-accent);
+    text-decoration: none;
+  }
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+
+  /* Skill dots */
+  .skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 0.88rem;
+  }
+
+  .dots {
+    display: flex;
+    gap: 4px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--dot-empty);
+  }
+
+  .dot.filled { background: var(--dot-filled); }
+
+  /* Languages */
+  .lang-row {
+    margin-bottom: 5px;
+    font-size: 0.88rem;
+  }
+  .lang-row strong {
+    color: var(--sidebar-heading);
+    font-weight: 600;
+  }
+  .lang-row .level {
+    display: block;
+    font-size: 0.78rem;
+    opacity: 0.75;
+    margin-top: -1px;
+  }
+
+  /* ── MAIN COLUMN ────────────────────────── */
+  .main {
+    padding: 32px 30px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .main .section-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--main-heading);
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 4px;
+    margin-bottom: 2px;
+  }
+
+  /* Summary */
+  .summary p {
+    font-size: 0.92rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* Experience & Education entries */
+  .entry { margin-bottom: 14px; }
+
+  .entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .entry-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--main-heading);
+  }
+
+  .entry-date {
+    font-size: 0.82rem;
+    color: var(--accent);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .entry-org {
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 5px;
+  }
+
+  .entry ul {
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .entry ul li {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .entry ul li::marker {
+    color: var(--accent);
+  }
+
+  /* Education specifics */
+  .edu-detail {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  /* ── PRINT ──────────────────────────────── */
+  @media print {
+    body { background: none; padding: 0; }
+    .page {
+      box-shadow: none;
+      width: 100%;
+      min-height: auto;
+    }
+  }
+
+  /* ── EDITABLE FOCUS STYLES ─────────────── */
+  [contenteditable]:focus {
+    outline: 2px dashed var(--accent);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ════════ SIDEBAR ════════ -->
+  <aside class="sidebar">
+
+    <h1><span>Alejandro</span><span>Hirmas</span></h1>
+
+    <ul class="contact-list">
+      <li><span class="icon">📍</span> Amsterdam, The Netherlands</li>
+      <li><span class="icon">📞</span> +31 6 443 60 254</li>
+      <li><span class="icon">✉</span> janohirmas@gmail.com</li>
+      <li><span class="icon">🔗</span> <a href="https://www.linkedin.com/in/alejandro-hirmas-95649418/" target="_blank">linkedin.com/in/alejandrohirmas</a></li>
+      <li><span class="icon">💻</span> <a href="https://github.com/janohirmas" target="_blank">github.com/janohirmas</a></li>
+      <li><span class="icon">🌐</span> <a href="https://ahirmas.com" target="_blank">ahirmas.com</a></li>
+    </ul>
+
+    <!-- Technical Skills -->
+    <div>
+      <div class="section-title">Technical Skills</div>
+
+      <div class="skill-row"><span>Python</span>
+        <div class="dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+      </div>
+      <div class="skill-row"><span>HTML, CSS</span>
+        <div class="dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+      </div>
+      <div class="skill-row"><span>JavaScript</span>
+        <div class="dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span></div>
+      </div>
+      <div class="skill-row"><span>R</span>
+        <div class="dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+      </div>
+      <div class="skill-row"><span>SQL</span>
+        <div class="dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+      </div>
+      <div class="skill-row"><span>Matlab</span>
+        <div class="dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></div>
+      </div>
+      <div class="skill-row"><span>Git</span>
+        <div class="dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span></div>
+      </div>
+      <div class="skill-row"><span>SASS</span>
+        <div class="dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span></div>
+      </div>
+      <div class="skill-row"><span>GDScript</span>
+        <div class="dots"><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div>
+      <div class="section-title">Languages</div>
+
+      <div class="lang-row">
+        <strong>Spanish</strong>
+        <span class="level">Native</span>
+      </div>
+      <div class="lang-row">
+        <strong>English</strong>
+        <span class="level">Professional (C2)</span>
+      </div>
+      <div class="lang-row">
+        <strong>Dutch</strong>
+        <span class="level">Intermediate (B2–C1)</span>
+      </div>
+      <div class="lang-row">
+        <strong>German</strong>
+        <span class="level">Intermediate (B1-B2)</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ════════ MAIN ════════ -->
+  <main class="main">
+
+    <!-- Summary -->
+    <section class="summary">
+      <div class="section-title">Summary</div>
+      <p> Decision Scientist with more than 10 years' experience in Experimental Design, Causal Inference, and Behavioral Economics. My experience spans across academia and industry, where I have successfully designed new methods for leveraging data for forecasting customer decisions. I have led the implementation of diverse experiments. Fluent in Python, R, SQL, and front-end technologies with strong communication and mentoring skills. </p>
+    </section>
+
+    <!-- Work Experience -->
+    <section>
+      <div class="section-title">Work Experience</div>
+
+       
+
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Decision Scientist | Consultant </span>
+          <span class="entry-date">2025 – Present</span>
+        </div>
+        <div class="entry-org">Amsterdam Data Collective (ADC)</div>
+        <ul>
+          <li>Designed and coordinated execution of multiple experiments using contextual bandits to enable personalized campaigns.</li>
+          <li>Estimated causal ML models to predict optimal treatment allocation and assisted on taking code to production.</li>
+          <li> <b>Business Outcome:</b> Increased output of marketing campaigns by 9%</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Postdoctoral Researcher</span>
+          <span class="entry-date">September 2023 – Present</span>
+        </div>
+        <div class="entry-org">Universiteit van Amsterdam</div>
+        <ul>
+          <li> Developed new methodologies for incorporating behavioral insights into Machine Learning models.</li>
+          <li> Built and deployed 3 full-stack experimental web apps for online user testing (A/B testing). Including the integration of eye-tracking hardware for lab experiments.</li>
+          <li> Mentored 3 Research Assistants on experimental design, data analysis, and academic writing. And supervised 20+ MSc. Students in their experimental research projects. </li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">PhD Studies </span>
+          <span class="entry-date">September 2017 – March 2023</span>
+        </div>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title"> Researcher </span>
+          <span class="entry-date">July 2015 – April 2017</span>
+        </div>
+        <div class="entry-org">Pontificia Universidad Católica de Chile</div>
+        <ul>
+          <li>Led data analysis for Chile's largest work-insurance firm using big data and predictive modeling to enhance workplace safety.</li>
+          <li>Designed behavioral interventions in marketing and Operations, contributing to restructure the company's distribution systems.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Data Consultant</span>
+          <span class="entry-date">Sept 2014 – June 2015</span>
+        </div>
+        <div class="entry-org">Globalfolio</div>
+        <ul>
+          <li>Developed and updated econometric models for financial forecasting.</li>
+          <li>Presented results, created reports and ensured proper data management.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <div class="section-title">Education</div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">PhD. Economics</span>
+          <span class="entry-date">2019 – 2025</span>
+        </div>
+        <div class="entry-org">Universiteit van Amsterdam</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Research Master Economics</span>
+          <span class="entry-date">2017 – 2019</span>
+        </div>
+        <div class="entry-org">Tinbergen Institute + Universiteit van Amsterdam</div>
+        <div class="edu-detail">Majors: Behavioral Economics &amp; Econometrics</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">MSc. Economics (Cum Laude)</span>
+          <span class="entry-date">2013 – 2014</span>
+        </div>
+        <div class="entry-org">Universiteit van Tilburg &amp; Universidad Católica</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">BSc. Economics and Business</span>
+          <span class="entry-date">2008 – 2013</span>
+        </div>
+        <div class="entry-org">Pontificia Universidad Católica de Chile</div>
+      </div>
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>
