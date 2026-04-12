@@ -1,0 +1,106 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=3.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{paracol}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontspec} % For custom fonts
+\usepackage{hyperref}
+\usepackage{multicol}
+
+% FONT SETUP (Use Merriweather for headers and Poppins-like for body)
+\setmainfont{Poppins} % Or substitute with Latin Modern Sans if unavailable
+\newfontfamily\headingfont{Merriweather}
+
+% Colors
+\definecolor{teal}{HTML}{007B8A}
+\definecolor{lightgray}{HTML}{CED4DA}
+\definecolor{textgray}{HTML}{212529}
+
+% Title formatting
+\titleformat{\section}{\Large\headingfont\color{teal}}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\bfseries\color{textgray}}{}{0em}{}
+
+% Remove indentation and tighten spacing
+\setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+\begin{document}
+
+% ---- Header ----
+\begin{paracol}{2}
+\columnratio{0.30, 0.70}
+\setlength{\columnsep}{1.5cm}
+
+% ---- Left Column ----
+\begin{leftcolumn}
+\textbf{\LARGE Alejandro Hirmas}
+
+\vspace{0.5em}
+PhD in Behavioral Economics
+
+\vspace{1em}
+\textbf{📍 Location} \\
+Amsterdam, The Netherlands
+
+\vspace{0.5em}
+\textbf{✉ Email} \\
+\href{mailto:a.hirmas@uva.nl}{a.hirmas@uva.nl}
+
+\vspace{1em}
+\textbf{🛠 Skills}
+\begin{itemize}
+  \item Data Analysis
+  \item Programming
+  \item Communication Skills
+  \item Interdisciplinary Work
+  \item Leadership
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{🌐 Languages}
+\begin{itemize}
+  \item English (Professional)
+  \item Spanish (Native)
+  \item Dutch (Intermediate, B2)
+  \item German (Intermediate, B1)
+\end{itemize}
+
+\end{leftcolumn}
+
+% ---- Right Column ----
+\begin{rightcolumn}
+
+\section*{Work Experience}
+
+\subsection*{Postdoctoral Researcher \hfill \small\textit{Universiteit van Amsterdam \hfill Sep 2023 – Present}}
+\begin{itemize}
+  \item Published one academic article, two others under submission
+  \item Presented at multiple international conferences
+  \item Collaborated in interdisciplinary teams
+  \item Developed web-based applications for economic experiments
+\end{itemize}
+\textbf{Skills Acquired:}
+\begin{itemize}
+  \item A/B Testing
+  \item Web Programming (HTML, CSS, JavaScript)
+  \item Python-based servers
+  \item SQL Data Management
+\end{itemize}
+
+\section*{Education}
+
+\subsection*{PhD in Economics \hfill \small\textit{Universiteit van Amsterdam, Mar 2025}}
+
+\subsection*{MRes in Economics \hfill \small\textit{Tinbergen Institute, Jun 2019}}
+
+\subsection*{MSc in Economics (Cum Laude) \hfill \small\textit{Universiteit van Tilburg, Aug 2014}}
+
+\subsection*{BA in Economics and Business \hfill \small\textit{Pontificia Universidad de Chile, Dec 2013}}
+
+\end{rightcolumn}
+\end{paracol}
+
+\end{document}
